@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Dom manipulations on elements:-</h1>
+    <p>1. create an empty element. <br> 2. create an content to element. <br> 3.append the element to html <br> 4.adding
+        element before to another element. <br> 5.remove the element. <br> 6.remove child element. <br> 7.replace the
+        element with another element.</p>
+    <hr>
+    <h2>Methods:</h2>
+    <p>1.createElement = create new empty element. <br> 2.innerText = create text for newly added element. <br>
+        3.appendChild = add the child in last to the parent. <br> 4.remove = remove the given element from its parent.
+        <br> 5.removeChild = remove its child from the parent. <br> 6.replaceWith = replace with the another element.
+    </p>
+    <hr>
+
+    <div id="1special">
+        <p id="id1">Hello</p>
+        <p id="id2">World</p>
+    </div>
+
+    <div id="2special">
+        <p id="child1">Iam john</p>
+        <p id="child2">19 years old.</p>
+    </div>
+
+    <script>
+
+        //1. New empty element.
+        var new_element = document.createElement("p")
+
+        //2. adding content to that element.
+        new_element.innerText = "Living in USA"
+
+
+        //3.adding element to html document step-1 : get that element where you can insert the element by using one of the 5 methods.
+        var parent = document.getElementById("2special")
+        parent.appendChild(new_element)
+
+
+        //4. If you want add an element before the another element step-1: get that parent and that element,  where you can insert the element before another element.
+        //Ex:- you want before 19 years old ,then create id for that and grt both parent and that one.
+        // parent is already loaded.
+        var child = document.getElementById("child1")   //Element where you can add element before that.
+        parent.insertBefore(new_element, child)   //Syntax (newElemnt,that element)
+        console.log(child)
+
+
+        //5. remove element
+        var child_1 = document.getElementById("child1")
+        child_1.remove()
+
+
+        //6.remove child elemnts
+        //get both parent and  what you remove from parent 
+        var parent = document.getElementById("2special")
+        var child_2 = document.getElementById("child2")
+        parent.removeChild(child_2)
+
+
+        //7.replace the element with another element.
+        var new_2 = document.createElement("h1")
+        new_2.innerText = "This is heading"
+        //id1 is replaced by new newly created heading
+        var new_replace = document.getElementById("id1")
+        new_replace.replaceWith(new_2)
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

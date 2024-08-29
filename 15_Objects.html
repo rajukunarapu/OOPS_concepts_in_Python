@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Objects = collection of elements, elements = key-value pairs.</h1>
+    <script>
+        //Creating Objects in 5 ways
+        //I.object literal: Normal by using curly braces.
+        var obj1 = { name: "john", age: 28, gender: "male", location: "Hyd" }
+        console.log(obj1)
+
+        //Accessing Objects key in 2 ways
+        //1.dot notation  (obj_name.key)
+        console.log(`Name = ${obj1.name}`)
+        //2.square bracket and double quotes
+        console.log(`age = ${obj1["age"]}`)
+
+        //Adding keys and values to object.
+        //1.dot notation  (obj_name.key)
+        obj1.name = "mike"                    // Changing name
+        console.log(`Name changed to = ${obj1.name}`)
+
+
+        obj1.Email = "mike123@gamail.com"  // Adding new key-value to object.
+
+        //2.square bracket and double quotes
+        obj1["location"] = "Bangolore"      // Changing location
+        console.log(obj1.location)
+        console.log(obj1)
+
+
+        //II.creating object with new key word and class constructer.
+        var obj2 = new Object()
+        //Adding elements to object.
+        obj2.name = "raju"
+        obj2.age = 22
+        obj2.location = "Hyd"
+        console.log(`2. Method object= ${obj2}`)
+
+        //III.Create object with new keyword and fuction constructer.
+        //Step-1 = Create new fuction
+        function obj3(name, age, gender) {
+            this.name = name
+            this.age = age             //This keyword is used to assigning parametrs to objects.
+            this.gender = gender
+        }
+
+        //Step-2 = create object with function call.
+        var var1 = new obj3("mike", 22, "Male");
+        var var2 = new obj3("bob", 20, "Female")
+        var var3 = new obj3("tyson", 30, "Male")
+
+        console.log(var1)
+        console.log(var2)
+        console.log(var3)
+
+        //Adding new elements to the object.
+        var1.Email = "mike123@gmail.com"
+        console.log(var1)
+
+
+        //Iv. Create object with object.create method
+        //In This method the structure is simillar to before defined object var1
+
+        // syntax
+        // var variable_name = Object.create(before defined object, {
+        //     key_name: {
+        //         value: ""
+        //     },
+        //     key_name: obj1{
+        //     value: ""
+        // },
+        //     key_name: {
+        //     value: ""
+        // }
+        // })
+
+        var obj_new = Object.create(var1, {
+            name: {
+                value: "raghav"
+            },
+            age: {
+                value: 33
+            },
+            catogery: {
+                value: "actor"
+            }
+
+
+        })
+        console.log(obj_new)
+    </script>
+</body>
+
+</html>

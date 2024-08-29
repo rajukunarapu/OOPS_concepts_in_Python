@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Filter:-</h1>
+    <p>Filter is used in arrys to filter the array and creats new array.It returns values while for-Each returns true or
+        false.</p>
+
+    <p>returned array is shorter than the Original array.</p>
+
+    <script>
+
+        //Filter
+        var x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        var y = x.filter(function (item, index, arr) {
+            return item % 2 == 0;                    //logic for Even_numbers
+        })
+        console.log(`Total Array: ${x}`)           //Whole array.
+        console.log(`Even Numbers : ${y}`)           //Even numbers.
+
+
+        //For-Each
+        var x1 = [100, 102, 103, 105, 108]
+        var y1 = x1.forEach(function (i, index, arr) {
+            return i % 2 == 0;
+        })
+        console.log(`For-Each method : ${y1}`)           // It gives undefined
+    </script>
+</body>
+
+</html>

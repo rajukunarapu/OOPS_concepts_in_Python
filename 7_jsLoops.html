@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Loops in js : </h1>
+    <p>1.for loop <br> 2.while <br> 3.do-while <br> 4.for-in <br> 5.for-each</p>
+    <script>
+        // 1.for loop  = It is used when the iteration is known
+
+        var sum = 0;
+        for (var counter = 1; counter <= 5; counter++) {
+            sum = sum + counter
+            document.write(sum + "<br>" + "<br>");
+            // document.write("<br>")
+        }
+        document.write(`total sum of 5 is : ${sum}` + "<br>" + "<br>")
+
+        document.write("<br" + "<br>")
+
+
+        var sum1 = 0;
+        for (var i = 0; i <= 4; i++) {
+            sum1 = sum1 + i;
+            document.write(sum1 + "<br>" + "<br>")
+        }
+        document.write("total sum is :" + sum1)
+
+        document.write("<br>" + "<br>")
+
+
+        // //2.while = it is used when checking condition is unknown, If the condition is true it executes infinite times.
+        // var number = 5;
+        // while (number != 0) {
+        //     document.write("Entered number is " + number + "<br>" + "<br>")
+        // }
+
+
+        //3. d0-while loop;
+        // var a = 10;
+        // do {
+        //     document.write("Hello World")
+
+        // }
+
+        // while (a == 10);
+
+        // 4.for in  = pointing the indexes  used for arrays and strings and objects
+        var arr = ["mango", "apple", "banana", "orange", "kiwi"]
+        document.write(arr + "<br>" + "<br>")
+        for (x in arr) {
+            document.write(x + "<br>")
+        }
+        document.write("<br>" + "<br>")
+
+
+        for (x in arr) {
+            document.write(x + " : " + arr[x] + "<br>")
+        }
+        document.write("<br>" + "<br>")
+
+
+        //for-of used to point the values of arrays,strings but not in objects
+        for (x of arr) {
+            document.write(x + "<br>")
+        }
+        document.write("<br>" + "<br>")
+
+        //object:- for-in used in objects but for-of not used because object is not iterable.
+        var obj1 = { "100": "john", "101": "mike", "102": "bob", "103": "alice" }
+        for (key in obj1) {
+            document.write(key + "<br>")
+        }
+        document.write("<br>" + "<br>")
+
+
+        for (key in obj1) {
+            document.write(key + " : " + obj1[key] + "<br>")
+        }
+        document.write("<br>" + "<br>")
+
+
+        var str = "raju"
+        for (z in str) {
+            document.write(z + "<br>")
+        }
+        document.write("<br>" + "<br>")
+
+        for (z in str) {
+            document.write(z + " : " + str[z] + "<br>")
+        }
+        document.write("<br>" + "<br>")
+
+        for (z of str) {
+            document.write(z)
+        }
+    </script>
+</body>
+
+</html>

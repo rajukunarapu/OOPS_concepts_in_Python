@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Optional Chaining(?) is used to avoid the errors.</h1>
+    <p id="one">This is paragraph.</p>
+    <script>
+        myobj = {
+            name: "raju",
+            personalinfo: {
+                age: 22,
+                state: "telangana",
+                educational: "B.tech"
+            }
+        }
+
+        //Accessing objects properties
+        console.log(myobj.name)
+        console.log(myobj.personalinfo)
+        console.log(myobj.personalinfo.age)
+        console.log(myobj.personalinfoooo?.age)  // Error occurs and after statements also stucked, (?) symbol used to avoid the errors
+        console.log(myobj.personalinfo.state)     // This statement executes bcz , we used ? symbol end of error occured word.
+
+        var p = document.getElementById("onee")?.innerText   // error occured , flow execution stopped. Here again we used ? symbol to avoid errors. only use before dot(.)
+        console.log("Hello")
+
+
+    </script>
+</body>
+
+</html>

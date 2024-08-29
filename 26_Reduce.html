@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Reduce function:- used in arrays for maximum_number,minimum_number,sum and product etc.. </h1>
+    <p>it takes 4 arguments , the extra one is accumulator.It stores the current value.</p>
+
+    <!-- syntax:-
+    arr_name.reduce(anyfunction(acc,item,index,arr){
+    statements
+    },(acc_value)) -->
+
+    <script>
+
+        //Initially, accumulator has 0's index number is 10. That is compared with item (is 10).
+        // If it's true return acc value or false goes to else block return some value this process will continue until the last item has arrived.
+        arr_1 = [50, 60, 70, 80]
+        var max_number = arr_1.reduce(function (acc, item, index, arr) {
+            if (acc > item) {
+                return acc            //Initially, 50 compared with 50 goes else block return item is 50.then tha accumulator value is 50, Again 50 compared with 60 again goes to else return 60
+            }
+            else {
+                return item
+            }
+        }, arr_1[0])
+        console.log(max_number)
+
+        //sum
+        arr_2 = [10, 30, 40, 50, 60]
+        var sum = arr_2.reduce(function (ac, ele) {
+            return ac + ele
+        }, 0)                      //If you want sum , Initially ac value is '0'. Product use "1"
+        console.log(sum)
+
+
+
+    </script>
+
+</body>
+
+</html>

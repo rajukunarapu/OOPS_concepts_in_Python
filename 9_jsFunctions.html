@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Function:- Used to do particular task</h1>
+    <script>
+
+        //I.Named Functions:-
+
+        //1. function creation = function keyword used to create function
+        function sum(num1, num2) {
+            var res = (`The sum of ${num1} and ${num2} is : ${num1 + num2} <br> `);
+            // return res;    if you want return this, you should write print in calling function.
+            document.write(res)   // you already wrote print no need to write again. just call the function with parameters
+        }
+        // var result = sum(10, 20);
+        // document.write(result+"<br>")
+
+        // document.write(sum(10,20)+"<br>")
+        // document.write(sum(10,200)+"<br>")
+
+        //2. function calling = function name used to call the function
+        sum(10, 20)
+
+        //3. function expression = Assigning function to a variable.
+        var variable1 = function sum(number1, number2) {
+            var result1 = (`The sum of ${number1} and ${number2} is : ${number1 + number2} <br> <br>`)
+            document.write(result1)
+        }
+
+        variable1(20, 20)
+
+
+        //II.Anonymous Function:-it doesn't require function name , name itself says that is anonymous(unknown)
+        var mul = function (x, y) {
+            var multiplication = (`The multiplication of ${x} and ${y} is : ${x * y} <br> `);
+            return multiplication;
+        }
+        // var result_mul = mul(10, 20)
+        document.write(mul(10, 20))
+
+        //     (Immediately called)
+        //III.Immediately invoked function expression = declare in parenthesis and call in parenthesis
+        var raju = (function subtraction(par1, par2) {
+            var sub = (`The subtraction of ${par1} and ${par2} is : ${par1 - par2}`)
+            // document.write(sub)
+            return sub;
+        })(20, 10);
+        // document.write(raju)
+
+        // IV.Arrow function = create by using arrow symbol and it doesnot require function keyword and function name.
+        var var_name = (para1, para2) => {
+            var result_1 = (`The division of ${para1} and ${para2} is : ${para1 / para2} <br>`)
+            document.write(result_1)
+        }
+        var_name(20, 10)
+
+        //only one line statement
+        var var_name1 = (x1, x2) => document.write(`The modulus of ${x1} and ${x2} is : ${x1 % x2} <br>`)
+        var_name1(20, 10)
+
+        //only one parameter
+        var var_name2 = x11 => (`The cube of ${x11} is : ${x11 * x11 * x11} <br>`)
+        document.write(var_name2(2))
+
+        //If no arguments(parameters) = no inputs
+        var name_1 = () => document.write("Hello world" + "<br>")
+        name_1()
+
+        var name_2 = _ => document.write("Good morning")
+        name_2()
+
+    </script>
+</body>
+
+</html>

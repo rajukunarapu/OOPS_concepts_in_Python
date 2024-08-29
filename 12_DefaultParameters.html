@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Function Default Parameter:</h1>
+    <script>
+        //Default parameters = Initially values given to the parameters, In the time of calling no need of any arguements
+        function raju(num1 = 10, num2 = 20) {
+            var result = num1 * num2;
+            document.write(`The product of ${num1} and ${num2} = ${num1 * num2} <br> <br>`)
+        }
+        raju()
+
+        //reset parameters are used when you dont know the how many parameters you pass
+        //Ex, If you want to pass 20 parameters it is very long to pass in parameter section in that time you keep ...name
+        function pro(num1 = 1, num2 = 2, ...fdf) {
+            // document.write(`The rest parameters = ${fdf} <br>`)
+            var res = num1 * num2;
+
+            for (i of fdf) {
+                var res = res * i;    //res variable stores num1 and num2 the enter values of fdf
+            }
+            document.write(`The product is = ${res}`)
+        }
+        pro()
+    </script>
+</body>
+
+</html>

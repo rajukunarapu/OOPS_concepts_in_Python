@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Closure:-</h1>
+    <p>Closure used to access the block level variables from inner function.</p>
+    <p>Closure is a feature that enables access of outer function variables to inner function, even though the outer
+        function already executed. </p>
+
+    <input type="button" value="click" onclick="updateCounter()">
+    <p id="click">clicked:0</p>
+
+    <script>
+
+        // 1.This outer function variable used in inner function
+        function outer() {
+            var var_1 = "This is an outer function variable."
+            function inner() {
+                console.log("This is an inner function variable.")
+                console.log(var_1)
+            }
+            return inner        // only returns the function.
+        }
+        var var_2 = outer()     // when ever we stored a outer function in one variable , that calls the inner function body.
+        var_2()
+
+        // 2. This function regarding to click function
+        var counter = 0
+        function updateCounter() {
+            counter = counter + 1
+            var p = document.getElementById("click")
+            p.innerText = `clicked:${counter}`                // It prints how many times you clicked.
+        }
+
+        function update() {
+            let counter1 = 0;                  // Outer variable is  updating.
+            function updateCount() {
+                counter1++
+                // console.log(counter1++)      // It prints the odd numbers.
+                console.log(counter1)           // It prints the numbers
+            }
+            return updateCount
+        }
+        var var_11 = update()
+        var_11()
+        var_11()
+        var_11()
+
+
+
+    </script>
+</body>
+
+</html>

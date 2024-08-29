@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        document.write("1. implicit type conversion (coersion)= internal (converts automatically.)");
+        document.write("<br>");
+        document.write("<br>");
+
+        document.write("2. Explicit Type conversion (coersion)= External (converts manually.)");
+        document.write("<br>");
+        document.write("<br>");
+
+        document.write("1. Implicit Type Conversion:-")
+        document.write("<br>");
+        document.write("<br>");
+
+        var a = 10;
+        var b = "Hello"
+        var c = "20"
+
+        document.write(`${a} + ${b} is : ${a + b}`);        //One of them is stirng it acts as like string
+        document.write("<br>");
+        document.write("<br>");
+
+        document.write(`${a} + ${c} is : ${a + c}`);        //One of them is stirng it acts as like string
+        document.write("<br>");
+        document.write("<br>");
+
+        document.write(`${a} - ${c} is : ${a - c}`);        //One of them is stirng but the operation is subtraction that's why it is subtracted.
+        document.write("<br>");
+        document.write("<br>");
+
+        document.write(`${a} * ${c} is : ${a * c}`)        //One of them is stirng but the operation is multiplication that's why it is multiplied.
+        document.write("<br>");
+        document.write("<br>");
+
+        document.write(`${a} + null is : ${a + null}`)     // null and false  means 0 , that's it is 11.
+        document.write("<br>");
+        document.write("<br>");
+
+        document.write(`${a} + ${"true"} is : ${a + true}`)      // True means 1.
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+        document.write("<br>");
+
+        let x = 10;
+        let x1 = "10"
+        let x2 = "10.10raju"
+
+        document.write("2. Explicit Type Conversion:-   1.number:parseInt,ParseFloat 2.String 3.boolean");
+        document.write("<br>");
+        document.write("<br>");
+
+        document.write(`Type of ${x} is : ${typeof (x)}`);
+        document.write("<br>");
+        document.write("<br>");
+
+        var y = String(x)
+        document.write(`String of ${x1} is : ${y}`)
+        document.write("<br>");
+        document.write("<br>");
+
+        var y1 = Number(x1)
+        document.write(`number of ${x1} is : ${y1}`);
+        document.write("<br>");
+        document.write("<br>");
+
+        var y2 = parseInt(x2)
+        document.write(`parseInt of ${x2} is: ${y2}`)
+        document.write("<br>");
+        document.write("<br>");
+
+        var y3 = parseFloat(x2)
+        document.write(`parseFloat of ${x2} is: ${y3}`)
+        document.write("<br>");
+        document.write("<br>");
+
+        var y4 = Boolean(x2)
+        document.write(`boolean of ${x2} is: ${y4}`)
+        document.write("<br>");
+        document.write("<br>");
+
+        document.write(`boolean of null is: ${Boolean(null)}`)
+        document.write("<br>");
+        document.write("<br>");
+
+        document.write(`boolean of 0 is: ${Boolean(0)}`)
+        document.write("<br>");
+        document.write("<br>");
+
+        document.write(`boolean of "" is: ${Boolean("")}`)
+        document.write("<br>");
+        document.write("<br>");
+
+        document.write(`boolean of "RAJU" is: ${Boolean("RAJU")}`)
+        document.write("<br>");
+        document.write("<br>");
+
+        document.write(`boolean of undefied is: ${Boolean(undefined)}`)
+        document.write("<br>");
+        document.write("<br>");
+    </script>
+</body>
+
+</html>

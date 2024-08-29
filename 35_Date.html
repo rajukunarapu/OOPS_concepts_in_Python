@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Date:</h1>
+    <p>Date method is a predefined method, used to display the current date</p>
+
+    <script>
+        // Current Date
+        let b1 = new Date()
+        console.log(b1)
+
+        // If you pass any parameters, then add the milli seconds to standard time.
+        let b2 = new Date(10000)
+        console.log(b2)
+
+        // If you want to add date, it can possible in 4 ways.
+        //1. first Way
+        let b3 = new Date(2019, 1, 20, 5, 30, 10)   // Maximum we can pass 6 arguments
+        console.log(b3)
+
+        //2. Second Way
+        let b4 = new Date("2019-1-20")        // We can only pass in String format.
+        console.log(b4)
+
+        //3. Third Way
+        let b5 = new Date("01-1-2019")   // Month-date-year
+        console.log(b5)
+
+        // 4. Fourth Way
+        let b6 = new Date(24 * 60 * 60 * 1000)  // Next day to Standard time
+        console.log(b6)
+
+        //getDate: get the date of that giving object
+
+        var days = ["sun", "mon", "tue", "wed", "thu", "fri", "sat"]
+        var months = ["jan", "feb", "mar", "apr", "may", "june", "july", "aug", "sep", "oct", "nov", "dec"]
+
+        console.log(b6.getDate())  // It returns date in numbers
+        console.log(days[b6.getDay()])   // Friday as 5 bcz, day starts with "0"
+        console.log(months[b6.getMonth()])   // january as 0 bcz, month starts with "0"
+        console.log(b6.getFullYear())   // It returns full year
+        console.log(b6.getHours())   // It returns the Hours
+        console.log(b6.getMinutes()) //It returns the minutes
+        console.log(b6.getSeconds()) // It returns the seconds
+        console.log(b6.getMilliseconds())  // It returns milliseconds
+
+        //SetDate: used to set the date
+
+        b6.setDate(20)
+        console.log(b6.getDate(20))
+
+        b6.setMonth(11)
+        console.log(months[b6.getMonth(11)])   //If you want in months name declare one array and access using indexes.
+
+        b5.setFullYear(2029)
+        console.log(b5.getFullYear(2029))
+
+        b6.setHours(20)
+        console.log(b6.getHours(20))
+
+        b6.setMinutes(20)
+        console.log(b6.getMinutes(20))
+
+        b6.setSeconds(20)
+        console.log(b6.getSeconds(20))
+
+        b6.setMilliseconds(20)
+        console.log(b6.getMilliseconds(20))
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1. Named function
+        //type-1
+        function sum(var1, var2) {
+            var sum_res = (`The sum of ${var1} and ${var2} is : ${var1 + var2} <br> `)
+            return sum_res;
+        }
+        document.write(sum(10, 20))
+        var result = sum(20, 20)
+        document.write(result)
+
+        document.write(`<br>`)
+
+        //type-2
+        function sum11(var11, var22) {
+            var sum_res1 = (`The sum of ${var11} and ${var22} is : ${var11 + var22} <br>`)
+            document.write(sum_res1)
+        }
+        sum11(100, 200)
+
+        document.write(`<br>`)
+
+        //type-3
+        var raju = function sum11(var11, var22) {
+            var sum_res1 = (`The sum of ${var11} and ${var22} is : ${var11 + var22} <br>`)
+            document.write(sum_res1)
+        }
+        raju(1000, 200)
+
+        document.write(`<hr>`)
+
+        //2.Anonymous function
+        var var_1 = function (par1, par2) {
+            var res_1 = (`The multiplication of ${par1} and ${par2} is : ${par1 * par2} <br>`)
+            document.write(res_1)
+        }
+        var_1(10, 20)
+
+        document.write(`<hr>`)
+
+        //3. Immediately invoked function expression
+        var var_2 = (function mul(num1, num2) {
+            var mul_res = (`The multiplication of ${num1} and ${num2} is : ${num1 * num2} <br>`)
+            document.write(mul_res)
+        })(10, 10)
+
+        var var_2 = (function mul(num1, num2) {
+            var mul_res = (`The multiplication of ${num1} and ${num2} is : ${num1 * num2} <br>`)
+            return mul_res;
+        })(10, 10)
+        document.write(var_2)
+
+        document.write(`<hr>`)
+
+        //4.arrow function=no need of function and function name 
+        var var1 = (num1, num2, num3) => {
+            var result = (`The multiplication of ${num1} and ${num2} and ${num3} is : ${num1 * num2 * num3} <br>`)
+            document.write(result)
+        }
+        var1(2, 3, 4)
+
+
+    </script>
+
+</body>
+
+</html>

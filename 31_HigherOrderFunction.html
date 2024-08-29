@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Higher Order Function:- EX:- map,filter,reduce,every,some,find etc..</h1>
+    <p>Higher order function is a function, that passed argument to another function or returning the function in
+        another
+        function.</p>
+
+    <script>
+
+        //1. Normal square function
+        var arr_1 = [10, 20, 30, 40, 50]
+        function square(par1) {
+            let arr_new = []         // result stored in new arrow.
+            for (ele of par1) {
+                var result = ele * ele
+                arr_new.push(result)   // Pushing the elements one by one to new_arrow
+            }
+            console.log(arr_new)
+        }
+        square(arr_1)
+
+        //2. Normal cube function
+        function cube(par1) {
+            let arr_new = []
+            for (ele of par1) {
+                var result = ele * ele * ele
+                arr_new.push(result)
+            }
+            console.log(arr_new)
+        }
+        cube(arr_1)
+
+        //3. By using High order function.
+
+        var var_2 = [100, 200, 300, 400]
+        function square1(val1) {
+            return val1 * val1
+        }
+        function cube1(val1) {
+            return val1 * val1 * val1
+        }
+        function calculator(par11, operation) {
+            var new_arr = []
+            for (ele1 of par11) {
+                var result_1 = operation(ele1)
+                new_arr.push(result_1)
+            }
+            console.log(new_arr)
+        }
+        calculator(var_2, square1)
+
+
+        //4. Returning function in another function.
+        function first() {
+            console.log("This is first function.")
+            return second
+        }
+        function second() {
+            console.log("This is second function.")
+        }
+        var x = first()
+        x()
+
+        //find = Finding the value and return value.
+        arr_2 = ["Hyderabad", "Kashmir", "ranchi"]
+        var var_11 = arr_2.find(function (ele) {
+            return ele.startsWith("K")
+        })
+        console.log(var_11)
+
+        //Some = Finding the value and return boolean values.
+        arr_2 = ["Hyderabad", "Kashmir", "ranchi"]
+        var var_11 = arr_2.some(function (ele) {
+            return ele.startsWith("K")
+        })
+        console.log(var_11)
+
+
+
+    </script>
+</body>
+
+</html>

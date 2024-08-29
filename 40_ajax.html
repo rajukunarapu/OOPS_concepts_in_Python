@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>AjAX = Asynchronous Javascript And Xml</h1>
+    <p>It is a technique, To make asynchronous HTTP Requests from client to server, allowing web pages to be updated
+        dynamically without requiring a full page reload. </p>
+    <p>That means without any reload the webpage will load.</p>
+    <hr>
+
+    <p><b>To make asynchronous http request follows 3 steps:-</b></p>
+
+    <p>step:- 1.create XMLHttpRequest object by using that constructor</p>
+    <hr>
+
+    <p>step:- 2. by using that variable to create request with open method it takes 5 parameters ,
+        <b>open(method,url,asynchronous,username,password)</b>
+    </p>
+    <p>method= get/post ,get=get the data from the server , post = post the data to the server.</p>
+    <p>url= "url of the page or if it is in same folder gives the location"</p>
+    <p>asynchronous = true/false , true = asynchronous programming enabled, false = asynchronous programming not
+        enabled. </p>
+    <p>username,password related to private api's</p>
+
+    <p>step:-3. by using that variable to send methode used to send the xmlhttpRequest to the server.</p>
+
+    <p>by using that variable to responseText Methode used to get the response from the server.</p>
+
+    <button id="btn">click here</button>
+    <div id="dv"></div>
+
+    <script>
+        var var_1 = document.getElementById("btn")
+        var var_2 = document.getElementById("dv")
+        var_1.addEventListener('click', updateMethod)
+
+        function updateMethod() {
+            // xmlhttprequest creation
+            var xhr = new XMLHttpRequest()
+
+            // create request with open method.
+            xhr.open("GET", "26_Reduce.html", "True")
+
+            // send the requst to server using send
+            xhr.send()
+
+            xhr.onprogress = function () {                     // onprogress and onload two are XMLHttpRequest events.
+                var_2.innerText = "on loading..."
+            }
+
+            xhr.onload = function () {
+                var_2.innerText = xhr.responseText
+            }
+        }
+
+    </script>
+</body>
+
+</html>

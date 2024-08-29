@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>String methodes:-</h1>
+    <p>It has several methodes like indexof,charat,lastindex etc..</p>
+    <script>
+        //String
+        var str = "rajuuu"
+        var str11 = "    RA  "
+        // String constructor using new keyword.
+        var str1 = new String("ramu")
+
+        // String methodes
+        console.log(str.charAt(2))   // Pass the number ,It returns the that index item.
+        console.log(str.indexOf('u'))  // pass the string , It returns the index value that encounters first.
+        console.log(str.lastIndexOf())   // pass the string , It returns the index value that encounters last.
+        console.log(str.concat(str1))   // It concatinate the str and str1.
+        console.log(str11.trim())     // It removes white spaces
+        console.log(str.toUpperCase())  // It returns string items to uppercase.
+        console.log(str11.toLowerCase())   // It returns string items to lower case.
+        console.log(str.startsWith("r"))   // It returns true value if its starts with "r"
+        console.log(str1.endsWith("u"))   // If it ends with "u" ,It returns the true value.
+        console.log(str1.split(","))   // It returns the string items by splitting items seperated by a comma.
+        console.log(str1.length)    // It's not an method that's why we didn't enclosed with round brackets.
+        console.log(str.sup("r"))
+        console.log(str.sub("r"))
+        console.log(str11.trimRight())   // It removes white spaces from left.
+        console.log(str11.trimLeft())     // It removes white spaces from right.
+
+    </script>
+</body>
+
+</html>

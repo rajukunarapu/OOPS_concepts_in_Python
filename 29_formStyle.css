@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    background-color: whitesmoke;
+    line-height: 1.5;
+    margin: auto;
+    margin-top: 50px;
+    width: 40%;
+}
+
+.header {
+    margin-bottom: 20px;
+    padding: 20px;
+    text-align: center;
+    background-color: lightgray;
+}
+
+.field label {
+    margin-left: 120px;
+}
+
+.field input {
+    margin-left: 120px;
+    margin-bottom: 20px;
+    background-color: antiquewhite;
+    padding: 8px;
+    border-radius: 10px;
+    border: none;
+}
+
+#btn {
+    margin-left: 15%;
+    width: 70%;
+    padding: 15px;
+    border: none;
+    border-radius: 20px;
+    background-color: darkblue;
+    color: white;
+    margin-bottom: 20px;
+}
+
+.field i,
+small {
+    display: none;
+}

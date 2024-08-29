@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Arrays: are used to store different data types grouply.</h1>
+    <h2>2 methodes used to declare:-</h2>
+    <p>1. var variableName = [element1,elememt2,...]</p>
+    <p>2. var variableName = new Array(element1,element2,...)</p>
+    <script>
+
+        var arr = ["john", "mike", "jackson", "bob"];
+        var arr1 = new Array("tyson", "mark", "mysterious", "sunk");
+
+        document.write("<hr>")
+        document.write("Element at 0 index :- " + arr[0] + "<br>" + "<br>");
+        document.write("Element at 0 index :- " + arr1[0] + "<br>" + "<br>");
+        document.write("<hr>")
+
+        arr[12] = "Twelth"  //element added at as we wish
+        document.write(arr + "<br>" + "<br>")
+
+        arr.push("raju")  //element added at last                  push = unshift
+        document.write("raju element is added at last :- " + arr + "<br>" + "<br>")   //(Add element at last) =(add element at first)
+
+        arr.unshift("add") //element added at first
+        document.write("add element is added at first :- " + arr + "<br>" + "<br>")
+        document.write("<hr>")
+
+        arr.pop() //element delete at last                         pop = shiift
+        document.write("Last element is deleted : - " + arr + "<br>" + "<br>")        //(delete at last )= (delete at first)
+
+        arr.shift()     //element delete at first
+        document.write("First element is deleted" + arr + "<br>" + "<br>")
+        document.write("<hr>")
+
+        document.write("slicing operator cut the array: - " + arr[1, 2] + "<br>" + "<br>")
+
+        document.write("same as Above:-" + arr.slice(3, 18) + "<br>" + "<br>")
+
+        document.write(arr.indexOf("raju"))   //entering element is not there, it returns -1
+
+
+
+
+
+    </script>
+</body>
+
+</html>

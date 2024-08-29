@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Map Function :-</h1>
+    <p>It used in arrays, To peform specific functions.<b>It simmilar to for-each but map function creates new array in
+            result.</b></p>
+    <p><b>Map = </b> Original array is equal to the returned array.(<b>ex:-factorial</b>)</p>
+    <p><b>Filter = </b>returns condition true values , array is shorter than the original
+        array.(<b>ex:-prime_numbers,even_numbers,Odd_numbers</b>)
+    </p>
+    <p><b>Reduce = </b>Returned value is single element(<b>ex:-Arithmetical_operations,max_number,min_number)</b></p>
+
+    <script>
+        // //Syntax:-
+        // arr_name.map(anyfunction(item, index, totalArray){
+        //     statements
+        // })
+
+        //Map Function for age calculation with arrays.
+        var x = [2000, 2002, 2003, 2004, 2005]
+        var y = x.map(function (item, index, arr) {
+            //     // console.table(item)
+            //     // console.table(index)      // It gives items one by one
+            //     // console.table(arr)
+
+            var age = 2024 - item;
+            return age
+
+        })
+        console.log("Using map function")
+        console.table(y)    // results give in new array.
+
+
+        // //By Using For-Each method:-
+        var x1 = [2006, 2007, 2008, 2009, 2010]
+        var y1 = x1.map(function (item, index, arr) {
+            var age = 2024 - item
+            return age
+        })
+        console.log("Using For-Each method")
+        console.table(y1)
+
+    </script>
+</body>
+
+</html>

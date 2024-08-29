@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>synchronous Programming:-</h1>
+    <p>It means, the program statements executes in sequence. All other statements are blocked until first statement
+        exrecutes.</p>
+    <h1>Asynchronous programming:- (Ex:-settimeout,promises,async and wait) </h1>
+    <p>It means , The program statements executes without blocking the flow of execution </p>
+
+    <script>
+        // 1. Synchronous Example:- It has blocking nature
+        console.log("first statement.")
+        var i;
+        for (i = 0; i < 10; i++) {            // Second statement executes when the loop complets execution
+            console.log(i)
+        }
+        console.log("second statement.")
+
+
+        // Asynchronous :- It doesn't have blocking nature.
+        console.log("This is Asynchronous example.")
+
+        // There is no blocking nature, settime out function executes after "1 second" in before that next statement will be execute.
+
+        setTimeout(function () {
+            console.log("This is inside the setTimeout Function")
+        }, 1000)
+        console.log("this is after the settimeout function.")
+    </script>
+
+</body>
+
+</html>

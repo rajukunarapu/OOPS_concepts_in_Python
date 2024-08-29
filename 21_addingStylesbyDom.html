@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Dom manipulation on styles:-</h1>
+
+    <p>Methods:- <br>
+        1.var_name.style.property = "value"
+        1.getAttribute("attribute_name") <br>
+        2.setAttribute("attribute_name","value")</p>
+
+    <h3>1.Adding styles to html= "Get that element where you want to apply style "<br><br> 2.How to get attribute value
+        = "By using getAttribute ()before that get that and store it an variable." <br><br> 3.How to set attribute value
+        = "By using setAttribute("attribute_name","value") before that get and store it an variable."</h3>
+
+    <div id="id1">John</div>
+    <div id="id2">Mike</div>
+    <div class="cls">Tony</div>
+    <h2 class="cls_1">Hello</h2>
+    <img src="./images/zayn3.jpg" id="img1">
+
+    <script>
+        //In Attribue style, use only id and query selector method
+
+        //1. Adding style to element.
+        var x = document.getElementById("id1")    //red color is added 
+        x.style.color = "red"
+
+        var y = document.querySelector("#id2")    // Blue color is added 
+        y.style.color = "blue"
+
+        var z = document.querySelector(".cls")   // Green color is added
+        z.style.color = "green"
+
+        var a = document.querySelector(".cls_1")   // Blue color is added
+        a.style.color = "blue"
+
+        //2. how to get Attribute value.
+        var var_2 = document.querySelector(".cls_1")   // It gives total attributes.
+        var_2.getAttribute('class')
+        console.log(var_2)
+
+        //3. how to set or change the attribute value.
+        var var_3 = document.querySelector(".cls_1")
+        var_3.setAttribute("id", "juka")   // set the attribute value to "juka"
+        console.log(var_3)
+
+        var_3.setAttribute("id", "dis")   //change the id attribute value to "dis"
+        console.log(var_3)
+
+        //Adding styles to imge 
+        var var_4 = document.getElementById("img1")
+        var_4.style.height = "150px"
+        var_4.style.width = "200px"
+
+        //change the source of an image by using setAttribute.
+        var_4.setAttribute("src", "./images/zayn2.jpg")
+
+    </script>
+
+</body>
+
+</html>

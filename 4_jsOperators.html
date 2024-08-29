@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>I.unary Oprator : perform operation on one variable.</p>
+    <p>II.binary Operator : perform operation on two variables.</p>
+    <p>III.Ternery Operator : perform operation on three variables and it is a conditional operator shorthand for if
+    </p>
+    <p>1.Arithmetic Operators</p>
+    <p>2.Comparator Operators</p>
+    <p>3.Assignment Operators</p>
+    <p>4.Logical Operators</p>
+    <p>5.Bitwise Operators</p>
+    <p></p>
+    <p></p>
+    <script>
+        //1. Arithmetic Operator    5: +,-,*,/,%
+        //It returns the values
+        var num1 = 10;
+        var num2 = 20;
+        var num3 = 30;
+        var num4 = 40;
+        var str1 = "Hello"
+        var str2 = " World"
+        console.log(`sum of ${num1} and ${num2} is : ${num1 + num2}`);                      //Addition
+        console.log(`sum of ${num1} and ${str2} is : ${num1 + str2}`);                      //Addition with string
+        console.log(`sum of ${num1} and ${num2} and ${str2} is : ${num1 + num2 + str2}`);   //Addition with string
+        console.log(`subract of ${num1} and ${num2} is : ${num1 - num2}`);                  //subtraction
+        console.log(`multiplication of ${num1} and ${num2} is : ${num1 * num2}`);           //multiplication
+        console.log(`division of ${num1} and ${num2} is : ${num1 / num2}`);                 //division
+        console.log(`modulus of ${num1} and ${num2} is : ${num1 % num2}`);                  //modulus
+        console.log(`negate of ${num1} is ${-num1}`);                                       //negate
+
+        //In post increment first assign the value and next time print, we should use print statement 2 times.
+        //In pre increment it directly increse.  a++,++a,a--,--a
+
+        console.log(`Post increment of ${num1} is ${num1++}`)               //post increment
+        console.log(`Post increment of ${num1} is ${num1}`)
+        console.log(`Pre increment of ${num2} is ${++num2}`)               //pre increment
+        console.log("<br>")
+        console.log(`post decrement of ${num3} is ${num3--}`)
+        console.log(`post increment of ${num3} is ${num3}`)
+        console.log(`post increment of ${num4} is ${--num4}`)
+
+        //2. comparator Operator    7:  ===,==,!=,<,<=,>,>=
+        //It Returns only either True or False
+        let var1 = 10;
+        let var2 = 20;
+        let str = "10"
+
+        console.log(`${var1} equals to ${str} : ${var1 == str}`);
+        console.log(`${var1} strict equals to ${str} : ${var1 === str}`);
+        console.log(`${var1} not equals to ${var2} : ${var1 != var2}`);
+        console.log(`${var1} is greater than  ${var2} : ${var1 > var2}`);
+        console.log(`${var1} is greater or equals t0 ${var2} : ${var1 >= var2}`);
+        console.log(`${var1} is less than ${var2} : ${var1 < var2}`);
+        console.log(`${var1} is less than or equals to ${var2} : ${var1 <= var2}`);
+
+        //3. Assignment Operator 5: +=,-=,*=,/=,%=
+        //It returns the values
+        let x1 = 10;
+        let x2 = 20;
+        let x3 = 10;
+        let x4 = 20;
+        let x5 = 10;
+        let x6 = 20;
+        let x7 = 10;
+        let x8 = 20;
+        let x9 = 10;
+        let x10 = 20;
+
+        console.log(`${x1} and ${x2} assignment plus is : ${x1 += x2}`);  //x1=x1+x2
+        console.log(`${x3} and ${x4} assignment minus is : ${x3 -= x4}`);  //x1=x1+x2
+        console.log(`${x5} and ${x6} assignment multiplication is : ${x5 *= x6}`);  //x1=x1+x2
+        console.log(`${x7} and ${x8} assignment division is : ${x7 /= x8}`);  //x1=x1+x2
+        console.log(`${x9} and ${x10} assignment modulus is : ${x9 %= x10}`);  //x1=x1+x2
+
+        //4. Logical Operator  3: &&,||,!
+        //Its also returns true or false. 
+        var y1 = 10;                          //non-zero is true. zero and empty string are false generally.
+        var y2 = 20;
+        var y3 = 30;
+        var y4 = 0;
+        console.log(`Power of ${y1} and ${y2} is : ${y1 ** y2}`);   // It acts as y1^y2
+        console.log(`${y1} && ${y2} is : ${y1 && y2}`)   // It returns the first value
+        console.log(`${y1} || ${y2} is : ${y1 || y2}`)   // normally without a condition it returns the second value
+        console.log(`${y1} is less than ${y2} and ${y2} is less than ${y3} : ${y1 < y2 && y2 < y3}`);   //both are true than it is true
+        console.log(`${y1} is less than ${y2} or ${y2} is less than ${y3} : ${y1 < y2 || y2 < y3}`);    //one of them is true it is true
+        console.log(!y4); // if it is true than output as false and if it is false output is true.
+        // non zero elements all are true , empty string and zero's are false.
+
+        //5. Bitwise operators:    &,|,~,^,<<,>>,>>>
+        //It returns the numbers i.e first convert into binary and check the condition and again convert into decimal.
+        var z1 = 10;
+        var z2 = 20;
+
+        console.log(z1 & z2);
+        console.log(z1 | z2);
+        console.log(z1)
+
+
+        //Ternery operators
+        // synatax is : condition ? expression1 : expression2
+
+        variable1 = (z1 == z2) ? console.log(`${z1} is equal to ${z2}`) : console.log(`${z1} is not equal to ${z2}`);
+        console.log(variable1)
+
+        //explaination:- if condition is true,excute expression1 else execute expression2. 
+    </script>
+</body>
+
+</html>

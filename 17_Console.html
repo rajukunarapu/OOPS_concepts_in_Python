@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //console.log = display the content in console box.
+        console.log("log statement.")
+
+        //console.info = display the content in console box and give information to user.
+        console.info("information statement.")
+
+        //console.table = display the array and objects content in table format .
+        var arr = [10, 20, 30, 40, 50, 60]
+        var obj1 = { name: "john", gende: "male", age: 30, location: "bangolore" }
+        console.table(arr)
+        console.table(obj1)
+
+        //console.clear = clear the console box.
+        // console.clear()
+
+        //console.error = display the content in red color.
+        console.error("Error Message statement.")
+
+        // //console.warn = display the content like warning.
+        console.warn("Warning statement.")
+
+        // //console.assert = If the condition is false it prints the statement.
+        console.assert(5 > 1, "condtion is true")   //not printed
+        console.assert(1 > 5, "condition is false")  //printed
+
+        //console.group = grouping the elements  .group and .groupEnd combinely used
+        console.group("group 1")
+        console.log("statement 1")
+        console.log("statement 2")
+        console.log("statement 3")
+        console.log("statement 4")
+        console.groupEnd("Group Ended")
+
+
+        //console.time("message") console.timeEnd("same message") combinely used
+        console.time("time started: ")
+        console.log("time for statement 1")
+        console.log("time for statement 2")
+        console.log("time for statement 3")
+        console.log("time for statement 4")
+        console.log("time for statement 5")
+        console.log("time for statement 6")
+        console.timeEnd("time started: ")
+
+        // console.count() = count the same message how many times occcured,If you give another name it will count from start. 
+        console.count("count")
+        console.count("count")
+        console.count("count")
+
+        console.countReset("count")
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Scope = Accessibility of variables</h1>
+    <p>1.Global scope <br>2. Local scope(Functional scope) <br>3. Block level sccope </p>
+    <hr>
+    <script>
+        document.write(`<b>1. Global scope:- accessed in everywhere.<br> <br> </b>`)
+        //1.Global scope =  accessed in everywhere.
+        var num = 10;
+        function raju() {
+            document.write(`The variable is created by var and Inside the function : ${num} <br>`)
+        }
+        raju()
+        document.write(`Outside the function : ${num} <br> <br>`)
+
+        let num1 = 200;
+        function fn() {
+            document.write(`variable created using let key word and Inside the variable: ${num1} <br>`)
+        }
+        fn()
+        document.write(`Outside the function : ${num1} <br> <br>`)
+
+        const num2 = 300;
+        function john() {
+            document.write(`The variable is created using const and Inside the variable : ${num2}`)
+        }
+        john()
+        document.write(`Outside the function : ${num2} <br> <br>`)
+
+        document.write(`<hr> `)
+        document.write(`<b>2. Local or Functional scope:- accessed only inside the function <br> <br> </b>`)
+
+        //2. Local scope = accessed only inside the function
+        var num3 = 400;
+        function mike() {
+            var number = 401
+            // let number = 401
+            // const number = 401
+            document.write(`Inside the function: ${number} <br>`)
+        }
+        mike()
+        document.write(`Outside the function : ${num3}<br> <br>`)
+
+        var num4 = "global value";
+        function bob() {
+            var num4 = "local value";
+            document.write(`global and local have same name : ${num4} <br> <br>`)
+        }
+        bob()
+
+        document.write(`<hr>`)
+        document.write(`<b> 3.Block Level scope:- acceessed only block level but variable created by  var keyword accessed in every where. <br> <br> </b>`)
+        //3. Block level scope = acceessed only block level but variable created by  var keyword accessed in every where.
+        {
+            var x1 = "var keyword"
+            document.write(`Inside the block : ${x1} <br> `)
+        }
+        document.write(`Outside the block : ${x1} <br> <br>`)
+
+        {
+            let x2 = "let Keyword"
+            document.write(`Inside the block : ${x2} <br> <br>`)
+        }
+        // document.write(`Outside the block : ${x2} <br> <br>`)  error
+
+        {
+            const x3 = "const Keyword"
+            document.write(`Inside the block : ${x3} <br>`)
+        }
+        // document.write(`Outside the block : ${x3} <br> <br>`)  error
+
+    </script>
+</body>
+
+</html>

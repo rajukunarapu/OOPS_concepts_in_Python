@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Call back fuction:-</h1>
+    <p>call back function is a function that is passed as argument to the another function.</p>
+
+    <script>
+
+        // 1. Call back function = Passing anonymous function as argument to another function.
+        function f1(test) {
+            console.log(test)  // It says, anonymous function stored in test parameter. 
+            test()   // It prints the console statement.
+        }
+        f1(function () {
+            console.log("This is an anonymous function")
+        })
+
+
+        Ex: -2
+        function first(name) {
+            console.log("This is first function.")
+            name()
+        }
+        function second() {
+            console.log("This is second function.")
+        }
+        f2(second)
+
+
+
+        function add(a, b) {
+            console.log(a + b)
+        }
+        function product(a, b) {
+            console.log(a * b)
+        }
+        function calculator(val1, val2, operation) {
+            operation(val1, val2)
+        }
+        calculator(4, 5, add)
+        calculator(4, 5, product)
+    </script>
+</body>
+
+</html>

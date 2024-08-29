@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>window object is a default object of browser,It has some methods and properties.</h1>
+    <h2>properties:-</h2>
+    <button onclick="openMethod()">open the window</button>
+    <button onclick="closeMethod()">close the window</button>
+    <button onclick="moveToMethod()">move To window</button>
+    <button onclick="moveByMethod()">move By window</button>
+    <button onclick="resizeToMethod()">resize To window</button>
+    <button onclick="resizeByMethod()">resize By window</button>
+
+    <script>
+        //1. Properties:-
+        console.log(window.document)    // It returns toatal html document.
+        console.log(window.location)
+        console.log(window.history)
+        console.log(window.Navigator)    // It returns the navigator
+        console.log(window.navigator.platform)    // It returns bit of the app
+        console.log(window.outerHeight)    // It returns toatal outer height
+        console.log(window.innerHeight)    // It returns toatal inner Height.
+        console.log(window.outerWidth)    // It returns toatal outer width.
+        console.log(window.innerWidth)    // It returns toatal inner width.
+
+        //2. Methods:-used to load new window or close new window. 
+        //1. open(url,name/target,specifications)
+        //url="any url/another document name also"
+        //target = "_blank","_self","_parent","_top"
+        // specifications = "width","height","left","top" 
+        var var_1;  // Global
+        function openMethod() {
+            var_1 = document.open("26_Reduce.html", "_blank", "width=400px,height=400px,top=400px,left=400px")
+        }
+
+        function closeMethod() {
+            var_1.close()
+        }
+
+        function moveToMethod() {
+            var_1.moveTo(800, 600)     // moveTo(left,top)
+        }
+
+        function moveByMethod() {
+            var_1.moveBy(100, 100)    // moveBy(previous left+giving left,privous top + giving top)
+        }
+
+        function resizeToMethod() {
+            var_1.resizeTo(100, 100)   // resizeTo(width,height)
+        }
+
+        function resizeByMethod() {
+            var_1.resizeByMethod(100, 100)   // resizeTo(privious width+giving width,privous height +giving heights)
+        }
+
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Spread Operator used to spread the elements. It can used in any iterable taking input
+        datatype(Arrays,strings,Objects ,set and map. )</h1>
+
+    <script>
+        var arr_1 = [10, 20, 30, 40, 50]
+        console.log(arr_1) // without spread operator
+        console.log(...arr_1) // With spread operator(...var_name)
+
+        //It can also elements to new array.
+        var arr_2 = [100, 200, arr_1]
+        console.log(arr_2)  // arr_1 is acts as new array element , but we want only elements.
+
+        var arr_3 = [100, 200, ...arr_1]
+        console.log(arr_3)  // It acts as all elements.
+
+
+        var str = "raju"
+        console.log(str)   // Normal
+        console.log(...str)  // Using Spread.
+
+        function add(a, b, c, d, e) {
+            console.log(a + b + c + d + e)
+        }
+        add(...arr_1)   // It can acts seperated elements
+        add(arr_1[0], arr_1[1], arr_1[2], arr_1[3], arr_1[4])
+    </script>
+</body>
+
+</html>

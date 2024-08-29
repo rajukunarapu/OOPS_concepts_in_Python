@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //1.variables = var , let ,const.
+        var var_1 = 10;
+        console.log("Created by using var key word and it can be updated, create simillar variables names with var");
+
+        let var_2 = 20;
+        console.log("Created by using let keyword and it can be updated but not allow same variable name more than one time.");
+
+        const var_3 = 30;
+        console.log("Created by using const keyword and it can't be updated and also not allow same variable name more than one time");
+
+        //2.Data types = number,string,boolean   undefined,null  array,set,object
+        var var_4 = 40
+        console.log(typeof (var_4))   //number
+
+        var var_5 = String(var_4)
+        console.log(typeof (var_5))   //String
+
+        var var_6 = "30.33 raju"
+        console.log(parseInt(var_6))   //It returns integer from string.
+        console.log(parseFloat(var_6)) //It returns float value from string.
+        console.log(Boolean(var_6))    // null,empty string and 0 gives false value.
+
+        var var_7;
+        console.log(var_7)      // undefined
+
+        var var_8 = null
+        console.log(var_8)      // null
+
+        //3. Template string = use bactic symbol (``) and if you want variable use ${}
+        console.log(`This is "template string" `)
+        console.log(`This prints number =  ${var_4}`)
+
+        //4.operators = 1.arithmetic (+,-,*,/,%) 2.comparator(==,===,!=,<,<=,>,>=) 3.assignment (+=,-=,*=,/=,%=) 4.logical (&&,||) 5.bitwise(&,|,~,^)
+        // I. Unaray = perform operation on single operand(variable)  (++a,a++,--a,a--)
+        //II. binary = perform operation on two operands (variable)  (a+a,b-b)
+        //III. Ternery = perform operation on three operands.
+        //syntax:-
+        var var_9 = 10 > 9 ? "10 is greater than 9" : "10 is less than 9" //like if-else (condition true execute first else execute second)
+        console.log(var_9)
+
+        //5.Control Statement = controls the flow of the program.  1,if 2,if else 3.elseif 4.switch.
+        //1. if
+        if (10 > 9) {
+            console.log("10 is greater than 9")       // If else used in voting eligibility.
+        }
+
+        //2. if-else
+        else {
+            console.log("else block")
+        }
+
+        //3. elseif()        used in marks purpose
+        var var_10 = 10;
+        var var_11 = 20;
+        // var var_12 = prompt("+ - * /")    //depends on user , what he enters that operation perform.
+
+        // //4. switch
+        // switch (var_12) {
+        //     case "+":
+        //         console.log(`Adition of ${var_10} and ${var_11} is : ${var_10 + var_11}`)
+        //         break;
+
+        //     case "-":
+        //         console.log(`Subtraction of ${var_10} and ${var_11} is : ${var_10 - var_11}`)
+        //         break;
+
+        //     case "*":
+        //         console.log(`Multiplication of ${var_10} and ${var_11} is : ${var_10 * var_11}`)
+        //         break;
+
+        //     case "/":
+        //         console.log(`Divisible of ${var_10} and ${var_11} is : ${var_10 / var_11}`)
+        //         break;
+
+        // }
+
+        //6.loops = (for ,while ,for-in,for-of,for-ecah)
+
+        // I.For loop= this used when you know the number of iteration
+        var count;
+        var sum = 0;
+        for (count = 0; count < 5; count++) {
+            sum = sum + count
+        }
+        console.log(`The sum is = ${sum}`)
+
+        //II.for-in = used to point the indexes of array,string and object.
+        arr = [10, 20, 30, 40, 50, 60]
+        for (i in arr) {
+            console.log(i)  // It prints the indexes of array.
+        }
+
+        //III. for-of = used to point the values.
+        for (j of arr) {
+            console.log(j)
+        }
+
+        ///Iv.For-each = point the value,index,total array only used in array to execute specific function in Array.
+        arr.forEach(function (value, index, Array) {
+            console.log(`This is from for-each ${value}`)
+            console.log(`This is from for-each ${index}`)
+            console.log(`This is from for-each ${Array}`)
+        })
+
+
+
+
+
+    </script>
+</body>
+
+</html>

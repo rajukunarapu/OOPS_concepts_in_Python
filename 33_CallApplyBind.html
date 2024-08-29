@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Call,aplly,bind:-</h1>
+    <p>These are the methodes used to manipulate the "this" keyword. </p>
+
+    <script>
+        //Object creation:
+        myobj = {
+            name: "raju",
+            greet: function (salary) {
+                console.log(`My name is "${this.name}" and salary is is about "${salary}"`)   // Here this keyword representing myobj object, If you want manipulate use one of those methods.
+            },
+            ex: function (wish) {
+                console.log(this.name, wish)
+            }
+        }
+        myobj.greet(40000)    // Object methods are accessed by using object name.
+
+        // OBJECT Creation
+        myobj1 = {
+            name: "john"
+        }
+
+        // Object 
+        myobj2 = {
+            name: "mike"
+        }
+
+        // Object
+        myobj3 = {
+            name: "bob"
+        }
+
+        // 1. Greet Method.
+        // This keyword says, here this is connected with "myobj1"
+        myobj.greet.call(myobj1, 50000)    // If you want pass any arguments to the function seperated by a comma.
+
+        // This keyword says, here this is connected with "myobj2"
+        myobj.greet.apply(myobj2, [60000]) // If you want pass any arguments to the function seperated by a comma and pass the arguments in array.
+
+        // This keyword says, here this is connected with "myobj3"
+        var myvar = myobj.greet.bind(myobj3, 70000)  // It's only returns the function , When ever you stored in a variable and call that variable then only executes.
+        myvar()
+
+
+        // 2. ex Method 
+        myobj.ex.call(myobj1, "good morning")
+
+        myobj.ex.apply(myobj2, ["good morning"])
+
+        var myvar_1 = myobj.ex.bind(myobj3)
+        myvar_1("good morining")
+    </script>
+</body>
+
+</html>

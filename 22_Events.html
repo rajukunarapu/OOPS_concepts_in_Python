@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Events = actions</h1>
+
+    <h2>Types of Events:-</h2>
+    <p><b>1.mouse:-</b> <br> 1.click <br> 2.double click <br> 3.mouse over <br> 4.mouse out <br> 5.mouse move</p>
+    <p><b>2.keyboard :-</b> <br> 1.key press <br> 2.key down = the finger ready to press <br> 3.keyup = the finger in
+        air</p>
+    <p><b>3.focus:- </b><br> 1.focus <br> 2.focus out <br> 3.blur </p>
+    <p><b>4.form :- </b><br> 1.submit <br> 2.reset <br> 3.chage = entering something into input fields. </p>
+
+    <h2>Who genereate Events:- </h2>
+    <p><b>1.user :- </b><br> 1.keypress <br>2.scroll <br> 3.focus </p>
+    <p><b>2.system :- </b><br> 1.load <br> 2.error <br> 3.abort = mission discontinue.</p>
+
+    <h2>Types of user generated Events:- </h2>
+    <p><b>1.browser specific events:- </b>minimize , close , resize , new_window , new_tab.</p>
+    <p><b>2.webpage specific events:- </b>scroll-up , scroll-down , click , hover.</p>
+
+    <h2>How many ways to handle event:-</h2>
+    <p><b>1.Inline event handler = Add the event in inline of html document element </b></p>
+    <p><b>Syntax:- </b>onEvent_name = "java script code" <br> <b>Note:- use on before event name</b></p>
+
+    <p><b>2.using Event properties = get the element by using id and perform events</b></p>
+    <p><b>Syntax:- </b>var_name.onEvent_name = function or java script code</p>
+
+    <p><b>3.using Event Listeners = get the element and use addEventListener('Event_name',fuction name or direct
+            javascript code)</b></p>
+
+
+    <!--1.Inline Event Handler:-->
+    name: <input type="text"><br>
+    <button onclick="change()" id="btn">Click me</button>
+
+    <script>
+        //creating change function in js , When you click it back-ground of body will change to green.
+        function change() {
+            document.body.style.backgroundColor = "green"
+        }
+
+        //2.using event properties:-
+        var var_1 = document.getElementById("btn")
+        var_1.onclick = ch;    // you shouldn't give paranthesis after the ch function , bcz if do it will directly perform the action without need of click.
+        function ch() {
+            document.body.style.backgroundColor = "yellow"
+        }
+
+        //3.using addEventListener(event_name,js  code)
+        var var_2 = document.getElementById("btn")
+        var_2.addEventListener("click", () => {   //Here i used arrow function 
+            document.body.style.backgroundColor = "blue"
+        })
+    </script>
+</body>
+
+</html>

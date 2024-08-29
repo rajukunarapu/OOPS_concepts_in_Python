@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>1. Find :-</h1>
+    <p>It returns the true element , only one. </p>
+    <p><b>1. Find = </b> If anything is true in condition , It returns the element.</p>
+    <p><b>2. Some = </b> If anything is true in condition , It retuns true value. (Ex:- Email creation , If anyone has
+        this name
+        it gives true and it says to others you can give another name )</p>
+    <p><b>3. Every = </b> If all true in condition, It returns true value . If anything is false retuns flase.(Ex:- If
+        all 6 subjects marks are greater than
+        35 it gives true value)</p>
+
+    <script>
+
+        //1. Find = If anything is true in condition , It returns the element.
+        var arr_1 = ["Hyderabad", "Mumbai", "Bengalore", "Hip pop"]
+        var find_1 = arr_1.find(function (ele) {
+            return ele.startsWith("H")
+        })
+        console.log(`Using Find method : ${find_1}`)           // It returns condition true value,then stopped the function.
+
+        //If you want all elements that starts with "H" we can use "filter"
+        var var_2 = arr_1.filter(function (ele) {
+            return ele.startsWith("H")
+        })
+        console.log(`Using filter Method :- ${var_2}`)           //It gives array that has 2 elements starts with "v"
+
+        //2. Some = If anything is true in condition , It retuns true value. (Ex:- Email creation , If anyone has this name it gives true and it says to others you can give another name )
+        var arr_3 = ["john", "mike", "bob", "alice"]
+        var var_3 = arr_3.some(function (ele) {
+            return ele.startsWith("j")
+        })
+        console.log(`Using some method :- ${var_3}`)           //It gives true value only , If condition is true.
+
+        //3. Every = If all true in condition, It returns true value (Ex:- If all 6 subjects marks are greater than 35 it gives true value)
+        var marks = [60, 50, 45, 39, 41, 48]
+        var var_4 = marks.every(function (ele) {
+            if (ele > 35) {
+                return ele
+            }
+        })
+        console.log(`Candidate pass in the exam :- ${var_4}`)
+
+
+    </script>
+</body>
+
+</html>

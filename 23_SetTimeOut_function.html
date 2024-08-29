@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>SetTimeOut function= </h1>
+    <p>set the time for function , after that time completes execute the function.</p>
+    <script>
+        // syntax:-
+        // setTimeout(() => {
+
+        // }, timeout);
+
+        //1.SetTimeout:- set the time, After the specified time is compllete. It will print the statement
+        var var_1 = setTimeout(function raju() {   //function and seperated by ","timeout
+            console.log("Hello")    // After 3 seconds this will print in console.
+        }, 3000)    //3000 ms  = 3sec
+
+
+        //2.SetInterval:-
+        var var_2 = setInterval(function ro() {   //setInterval = Every 5 seconds that statement(zoya) will print.it not stopped until we give "clearInterval"
+            console.log("Hello_1")
+        }, 3000)
+
+
+        //3.clearInterval:-
+        var var_2 = setInterval(function ro() {   // If we give clearInterval after the print statement, It will print only one time.
+            console.log("Hello_2")
+            clearInterval(var_2)
+        }, 3000)
+
+
+        //
+        var counter = 1
+        var var_3 = setInterval(function po() {   //We want only three times, take  counter variable and assign "1". Increment the counter then use if statement  
+            console.log("Hello_3")
+            counter++                                 //Counter++ used to increment the value
+            if (counter > 3) {
+                clearInterval(var_3)
+            }
+        }, 3000)
+
+    </script>
+</body>
+
+</html>

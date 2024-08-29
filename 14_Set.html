@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=p', initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Set = is similar to the arrays but it allows only unique values.</h1>
+    <h1>Array = collection items but allows duplicate values also.</h1>
+    <script>
+        var arr = [10, 10, 20, 20, 30, 30]
+        document.write(`Array = ${arr} <br>`)
+
+        //Array Conveted into Set
+        var set_arr = new Set(arr)
+        console.log(`Array converted into set : ${set_arr} `)
+
+        //Set Creation:-
+        let set1 = new Set()
+        //adding
+        set1.add("raju")
+            .add("ramu")
+            .add("john")
+            .add("mike")
+            .add("bob")
+            .add("alice")
+            .add("raju")     // it's ignored bcz it allows only unique.
+        console.log(set1)
+        console.log(`Length of the set is = ${set1.size}`)
+        // document.write(set1)
+
+        //Deleting
+        set1.delete("bob")
+        set1.delete("john")
+        var status = set1.delete("ramu")
+        console.log(`status is : ${status}`)
+        console.log(set1)
+        console.log(`The set after deleting the items = ${set1.size}`)
+
+        //Entries = Iterator(like for-of and for-each)
+        let s1 = set1.entries()
+        console.log(s1)
+
+        //for-of
+        for (s2 of set1) {
+            console.log(`This is for-of loop = ${s2} `)
+        }
+
+        //for-Each
+        set1.forEach(function (item, index) {
+            console.log(`This is For-Each loop = ${item} `)
+        })
+
+    </script>
+</body>
+
+</html>

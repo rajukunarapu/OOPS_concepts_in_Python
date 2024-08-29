@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Document object model(DOM):- </h1>
+    <p>Dom converts document into tree like structure.<br>When the page loaded on the browser the browser automatically
+        creates a dom.</p>
+    <p>Html whole page is a document, by using Dom we can access , modify ,remove ,create
+        and change the html elements at any position. Dom has 5 methods and properties.</p>
+    <div id="special_1">
+        <h2>This is heading 1</h2>
+        <p>this is paragraph 1</p>
+    </div>
+
+    <div class="special">
+        <h2>This is heading 2</h2>
+        <p>This is paragraph 2</p>
+    </div>
+
+    <div class="special">
+        <h2>This is heading 3</h2>
+        <p>This is paragraph 3</p>
+    </div>
+
+    <a href="#"> link 1</a>
+    <a href="#"> link 2</a>
+
+    <script>
+        //Method-1:
+        let var_1 = document.getElementById("special_1")  //It returns the content in specified id name
+        console.log(var_1)                                 // Note:- id sholud be unique it only returns the first spcified id
+
+        //Method-2:
+        let var_2 = document.getElementsByClassName("special")  //It returns the content in that class name
+        console.log(var_2)                                      // Note:- Many classes with same name, It reutrns all
+
+        //Method-3:
+        let var_3 = document.getElementsByTagName("div")     //It returns the content in that tag   
+        console.log(var_3)                                    // Note:- Many tags with same name, It reutrns all
+
+        //Method-4:
+        let var_4 = document.querySelector(".special")      //It returns only first specified .class
+        console.log(var_4)
+
+        // let var_4 = document.querySelector("#special")      //It returns only first specified #id
+        // console.log(var_4)
+
+        // let var_4 = document.querySelector("h2")      //It returns only first specified tagename.
+        // console.log(var_4)
+
+        //Method-5:
+        let var_5 = document.querySelectorAll(".special")   //It returns all spcified .class 
+        console.log(var_5)
+
+        // let var_5 = document.querySelectorAll("#special")   //It returns only spcified #id
+        // console.log(var_5)
+
+        // let var_5 = document.querySelectorAll("h2")   //It returns all spcified tagename
+        // console.log(var_5)
+
+        //properties
+        console.log(document)   //It returns Total html documents. 
+        console.log(document.body)
+        console.log(document.head)
+        console.log(document.title)
+        console.log(document.links)
+    </script>
+</body>
+
+</html>

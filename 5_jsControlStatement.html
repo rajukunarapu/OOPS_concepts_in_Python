@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>4 types of control statements are available in javascript:</h1>
+    <p> 1 .if <br> 2. if else <br> 3.else if <br> 4.switch
+        statements</p>
+    <script>
+        //1.if : condition is true execute the blocks
+        // var num1 = +prompt("Enter the number: ");
+        // if (num1 > 0) {
+        //     alert("Etered number is : " + num1)
+        // }
+
+
+        //2.if else: if condition is true execute the if block
+        // var balance = 10000;
+        // var amount = +prompt("Enter the amount: ");
+
+        // if (amount < balance) {
+        //     alert("Before the transaction  current balance is : " + balance);
+        //     balance = balance - amount;
+        //     alert("After the transaction current balance is :" + balance);
+        // }
+
+        // else {
+        //     alert("Enter the amount less than current balance:")
+        // }
+
+        //3. else if (similar to elif): if condtion is not true check another else if condition that is also not true check another that is also not true execute else block
+
+        // var marks = +prompt("Enter a marks : ");
+        // var grade;
+
+        // if (marks >= 90) {
+        //     grade = "A+"
+        // }
+
+        // else if (marks >= 74 && marks <= 89) {
+        //     grade = "A"
+        // }
+
+        // else if (marks >= 65 && marks <= 73) {
+        //     grade = "B"
+        // }
+
+        // else if (marks >= 51 && marks <= 64) {
+        //     grade = "c"
+        // }
+
+        // else if (marks >= 35 && marks <= 50) {
+        //     grade = "pass"
+        // }
+
+        // else {
+        //     grade = "fail"
+        // }
+
+        // alert("your marks : " + marks + " And your grade: " + grade);
+
+
+
+        // 4.switch statement: like else if
+        // syntax: -  switch (exression) {
+        //     case "name":
+        //         statements
+        //         break
+        //     case "name":
+        //         statements
+        //         break
+        //     case "name":
+        //         statements
+        //         break
+        //     default:
+        //         statements
+        // }
+
+        var number1 = +prompt("Enter a number1: ")
+        var number2 = +prompt("Enter a number2: ")
+        var operation = prompt("select what type of operation  to do on numbers + - * /) ");
+
+        switch (operation) {
+            case "+":
+                alert(`sum of ${number1} and ${number2} is : ${number1 + number2}`);
+                break;
+
+            case "-":
+                alert(`subtraction of ${number1} and ${number2} is : ${number1 - number2}`);
+                break;
+
+            case "*":
+                alert(`multiplication of ${number1} and ${number2} is : ${number1 * number2}`);
+                break;
+
+            case "/":
+                alert(`division of ${number1} and ${number2} is : ${number1 / number2}`);
+                break;
+
+            default:
+                alert("Enter correct operation")
+        }
+
+
+    </script>
+</body>
+
+</html>

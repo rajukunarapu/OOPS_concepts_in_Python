@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>For-each methode used only in array,To execute the specific fuction in an array.</h1>
+    <h3>syntax:- <br> array_name.forEach(any fuction(currentItem , index , totalArray) {})
+        <br> <b>Note: you can give any name in that three sections but atleast one is required.</b>
+    </h3>
+
+    <script>
+        //1.Using Named function
+        document.write("<b>1.By Using Named Function</b> <br><br>")
+        var arr = ["raju", "ramu", "raghu"]
+        arr.forEach(function raju(item, index, a) {
+            document.write(`Item name is : ${item}  and index is : ${index} <br>`)
+            document.write(`The completen array is : ${a}`)
+        })
+        document.write("<br> <hr>")
+        document.write("<b>2.By Using Anonymous Function</b>  <br><br>")
+
+
+        //2. Anonymous fuction
+        arr.forEach(add = function (item, index, a) {
+            document.write(`Item name is : ${item}  and index is : ${index} <br>`)
+            document.write(`The completen array is : ${a}`)
+        })
+        document.write("<br> <hr>")
+        document.write("<b>3.By Using Immideately invoked  Function expression </b>  <br><br>")
+
+
+        //3. Immediately invoked  fuction expression.
+        arr.forEach(function add(item, index, a) {
+            document.write(`Item name is : ${item}  and index is : ${index} <br>`)
+            document.write(`The completen array is : ${a}`)
+        })
+        document.write("<br> <hr>")
+        document.write("<b>4.By using Arrow function</b>  <br><br>")
+
+        //4. Arrow  fuction.
+        arr.forEach(add = (item, index, a) => {
+            document.write(`Item name is : ${item}  and index is : ${index} <br>`)
+            document.write(`The completen array is : ${a}`)
+        })
+
+    </script>
+</body>
+
+</html>
