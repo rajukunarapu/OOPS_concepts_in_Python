@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Fetch API:-</h1>
+    <p>fetch API is a methode of window object, It is used to make AJAX call.</p>
+    <p>Fetch API returns promise as result and .then and .catch methode used to access promise</p>
+    <script>
+        // Fetch API for get the data from the server
+        // fetch("url",{methodes optional})
+        var p = fetch("demo.json")
+        p.then(function (data) {        // .then methode returns the promises again and we need to give another .this key word to access the response.
+            data.json().then(function (data1) {   //the response in the form of string but the file is an json. we need give json() methode to return the response in json object.
+                console.log(data1)
+            })
+        })
+
+        var p1 = fetch("25_Filter.html")
+        p1.then(function (data) {           // for resolve(fulfill)
+            data.text().then(function (data1) {   //the response in the form of string but we need text. text() methode used to returns the response in text form.
+                console.log(data1)
+            })
+        })
+
+        // Fetch API for post to server.
+        fetch('https://jsonplaceholder.typicode.com/posts', {
+            method: 'POST',
+            body: JSON.stringify({
+                title: 'json_file',
+                body: 'something',
+                userId: 2,
+            }),
+            headers: {
+                'Content-type': 'application/json; charset=UTF-8',
+            },
+        })
+            .then((response) => response.json())
+            .then((json) => console.log(json));
+
+        // Listing all the resources 
+        fetch('https://jsonplaceholder.typicode.com/posts')
+            .then((response) => response.json())
+            .then((json) => console.log(json));
+
+    </script>
+</body>
+
+</html>

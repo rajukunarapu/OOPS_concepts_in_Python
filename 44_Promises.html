@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Promises:-</h1>
+    <p>Promises are used to handle the call back hell, Promises is an object that produce either resolved, rejection and
+        pending value.</p>
+
+    <p>3 states :- 1. reject = rejection operation, 2. pending = operation is not yet completed. 3. fulfilled =
+        operation complete
+        successfull.</p>
+
+    <p>Using Promises:- 1.then() = when the promise is fulfilled executes that.</p>
+    <p>2.catch() = when the promise is reject executes that.</p>
+    <p>3.finally() = regardless of fulfilled or reject it executes.</p>
+
+    <script>
+        // Promise object takes executer function(function call)  and that function takes 2 function calls
+        var p = new Promise(function (resolve, reject) {
+            // let data = false
+            let data = true
+            if (data) {            // If it's true print resolve statements.
+                resolve("Promise is done.")  // Resolve is an function call.
+            }
+            else
+                reject("Promise is not done.")
+
+        })
+        // console.log(p)    // It prints the object
+
+        p.then(function (data1) {    // It takes function call, .then keyword used to print the resolve function call
+            console.log(data1)
+        })
+
+        p.catch(function (data1) {   // .catch keyword used to print the reject function call
+            console.log(data1)
+        })
+
+
+    </script>
+
+</body>
+
+</html>

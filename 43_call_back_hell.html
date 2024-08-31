@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Call back hall:-</h1>
+    <p>call back hell is a pyramid of doom, It is a situation where we have multiple nested call back functions. It
+        occurs when the series of asynchronous operations performed. </p>
+    <script>
+
+        // It's like pyramid doom
+        // These all are asynchronous nested call back functions
+        // SetTimeout function is a asynchronous function.
+        setTimeout(function () {
+            console.log("first statement.")
+            setTimeout(function () {
+                console.log("second statement.")
+                setTimeout(function () {
+                    console.log("third statement.")
+                    setTimeout(function () {
+                        console.log("fourth statement.")
+                        setTimeout(function () {
+                            console.log("fifth statement.")
+                        }, 2000)
+                    }, 2000)
+                }, 2000)
+            }, 2000)
+        }, 2000)
+
+        // To over come this situation we need promises.
+    </script>
+
+</body>
+
+</html>

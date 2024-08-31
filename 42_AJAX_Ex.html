@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>AJAX = "Asynchronous Javascript And Xml"</h1>
+    <p>It is used to without reloading the webpage get the particular content from the server using AJAX call
+        (XMLHttpRequest object)</p>
+
+    <!-- html code -->
+    <button id="btn">Click here</button>
+    <div id="dv"></div>
+
+    <script>
+        var btn_1 = document.getElementById("btn")
+        var dataele = document.getElementById("dv")
+
+        btn_1.addEventListener("click", funMethod)
+
+        function funMethod() {
+            var xhr = new XMLHttpRequest()
+            xhr.open("GET", "demo.json", "True")
+            xhr.send()
+
+            xhr.onload = function () {
+                result = xhr.responseText
+                result = JSON.parse(result)
+                console.log(result)
+            }
+
+
+        }
+    </script>
+</body>
+
+</html>

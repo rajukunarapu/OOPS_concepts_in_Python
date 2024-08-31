@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button id="btn" onclick="openMethod()">open the window</button>
+    <button id="btn" onclick="closeMethod()">close the window</button>
+    <button id="btn" onclick="movetoMethod()">move to the window</button>
+    <button id="btn" onclick="movebyMethod()">move by the window</button>
+    <button id="btn" onclick="resizetoMethod()">resize to the window</button>
+    <button id="btn" onclick="resizebyMethod()">resize by the window</button>
+
+    <script>
+        // Window methodes.  1. open = open the new window 2. close = close the existing window.
+        var var_1;
+        function openMethod() {
+            var_1 = window.open("26_Reduce.html", "_blank", "width=200px,height=200px,left=400px,top=100px,")
+        }
+
+        function closeMethod() {
+            var_1.close()
+        }
+
+        function movetoMethod() {
+            var_1.moveTo(100, 100)
+        }
+
+        function movebyMethod() {
+            var_1.moveBy(200, 200)
+        }
+
+        function resizetoMethod() {
+            var_1.resizeTo(500, 500)
+        }
+
+        function resizebyMethod() {
+            var_1.resizeBy(100, 100)
+        }
+
+
+    </script>
+</body>
+
+</html>

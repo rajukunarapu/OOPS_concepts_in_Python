@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>async and await:-</h1>
+    <p>these keywords used to handle the promises. Two key words should be used in combinely. </p>
+    <script>
+        // Normal function = flow execution blocked , If first stament executes then only second statement executes
+        function test() {
+            console.log("this is inside the function.")
+        }
+        test();
+        console.log("this is outside the function.")
+
+        // async and await 
+        async function test1() {                 // async keyword use before the function
+            var var1 = await 5
+            return var1                          // If we don't use await keyword, It returns promises. In that promises we have response.
+        }                                        // If we use await keyword, It returns directly promises response.
+        var var_2 = test1()
+        var_2.then(function (data) {             // .then methode used to access the promises response.
+            console.log(data)
+        })
+        console.log("this is outside function of 2 Ex.")
+
+
+        // fetch methode used in async function
+        async function f1() {
+            let res = await fetch("demo.json")
+                .then(function (data1) {                     // It gives promises response , If you want that response use .this keyword
+                    console.log(data1)
+                })
+        }
+        f1()
+
+        async function f2() {
+            let res = await fetch("demo.json")
+            res.text()                                    // It returns the text file exact of file
+                .then(function (data1) {                     // It gives promises response
+                    console.log(data1)
+                })
+        }
+        f2()
+
+        async function f3() {
+            let res = await fetch("demo.json")
+            res.json()                                       // It returns in json object
+                .then(function (data1) {                     // It gives promises response
+                    console.log(data1)
+                })
+        }
+        f3()
+    </script>
+</body>
+
+</html>
