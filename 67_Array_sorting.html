@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Array sort() = Used to ordering the array elements.</h1>
+
+    <script>
+        // 1. strings
+        var str = ["raju", "john", "alice", "bob", "gim", "carry"]
+        console.log("Original string : ", str)
+        console.log("sorting the string : ", str.sort())
+
+        // 2. Numbers in Ascending order 
+        var arr_1 = [44, 55, 33, 22, 66, 77]
+        console.log("Original array : ", arr_1)
+        console.log("Sorting Numbers Ascending order : ", arr_1.sort())
+        var var_2 = arr_1.sort((a, b) => a - b)
+        console.log("Same as above : ", var_2)
+        // 1.If a-b =less than 0   ; a will be placed before the b
+        // 2. If a-b = greater than 0 ; b will be placed before the a
+        // 3. If a-b = 0  ; no change
+
+        // Numbers in Descending order
+        var arr_2 = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+        console.log("original array : ", arr_2)
+        var var_1 = arr_2.sort((a, b) => b - a)
+        console.log("Descending order : ", var_1)
+        // 1.If b-a =less than 0   ; b will be placed before the a
+        // 2. If b-a = greater than 0 ; a will be placed before the b
+        // 3. If b-a = 0  ; no change
+
+
+        // Objet datatype:
+        var obj1 = [{ "name": "john", "age": 22 }, { "name": "raju", "age": 30 }, { "name": "alice", "age": 35 }, { "name": "bob", "age": 30 }]
+        var var_3 = obj1.sort((a, b) => a.age - b.age)
+        // Sorting elements by age
+        console.table("Sorting Array Objects by age : ", var_3)
+
+
+        // Sorting elements by name
+        var obj2 = [{ "name": "john", "age": 22 }, { "name": "raju", "age": 30 }, { "name": "alice", "age": 35 }, { "name": "bob", "age": 30 }]
+        //z-a
+        var var_4 = obj2.sort((x, y) => {
+            if (x.name < y.name) return 1
+            else return -1
+        })
+        console.table("Sorting Array Objects by name Z-A : ", var_4)
+        //a-z
+        var var_4 = obj2.sort((x, y) => {
+            if (x.name < y.name) return -1                          // -1 = no swap 
+            else return 1                                           // 1 = Swap
+        })
+        console.table("Sorting Array Objects by name A-Z : ", var_4)
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Error Handling used to handle the errors. It has 2 keywords 1.try 2. catch</h1>
+    <p>1. try :- try keyword contains the error statements</p>
+    <p>2. catch :- catch keyword used to catch the errors.</p>
+
+    <script>
+        // If the error occurs in any line it stops the execution flow , That's why we used error handling.
+        try {
+            console.log("Inside the try block")
+            console.log("Hello")
+            console.log(hello)
+        }
+        catch (error) {
+            console.log(error.name)    // It returns the error name
+            console.log(error.message) // It returns the message(like It's not defined)
+            console.log("Inside catch block ")
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Currying = function takes "n" number of parameters and split the function into "n" number of functions depends
+        on number of parameters.Every function returns one parameter or If it is last function it returns result.</h1>
+
+    <script>
+        //1. Normal function.
+        function normal(a, b) {
+            return a * b
+        }
+        console.log("normal function : ", normal(7, 7))
+
+        //2. Currying function = split the function.
+        function multiply(a) {
+            return function (b) {
+                return a * b
+            }
+        }
+
+        // Pass another argument like this
+        var f1 = multiply(7)(7)
+        console.log("currying function : ", (f1))
+
+        // Another way of calling.
+        var f2 = multiply(7)
+        console.log("Another way of calling : ", f2(7))
+    </script>
+
+</body>
+
+</html>

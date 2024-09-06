@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Class = class is blueprint for an object , collection of objects</h1>
+    <script>
+        //Ex:-1
+        //class creation
+        class raju {
+            // constructor function
+            constructor(n, a) {
+                this.name = n;
+                this.age = a;
+            }
+            // get keyword used to create methodes, It does n't allow any parameters.
+            get getmethode() {
+                console.log("my name is :", this.name + " i am ", this.age + " years old")
+            }
+        }
+        //object creation using class name
+        var new_obj = new raju("raju", 22)
+        //Accessing class methodes by using object.property name(Inside the class function are called as "Methodes")
+        new_obj.getmethode
+        // If it is created by get keyword don't use paranthesis()
+
+        //Ex:-2
+        class raju1 {
+
+            // constructor function
+            constructor(n, a) {
+                this.name = n;
+                this.age = a;
+            }
+            // get keyword used to create methodes, It does n't allow any parameters.
+            greet() {
+                console.log("my name is :", this.name + " i am ", this.age + " years old")
+            }
+        }
+
+        //object creation using class name
+        var new_obj = new raju1("John", 23)
+
+        //Accessing class methodes by using object.property name(Inside of class functions are called as "Methodes")
+        new_obj.greet()
+
+
+        //Ex:-3
+        class demo {
+            constructor(name, model) {
+                this.name = name;
+                this.model = model;
+            }
+            // set key word used to set the parameter , It takes only one parameter.
+            set setmethode(price,) {
+                this.price = price
+            }
+            // get methode doesn't take any values.
+            get getmethod() {
+                console.log("name of the car :", this.name)
+                console.log("model of the car :", this.model)
+                console.log("price of the car :", this.price)
+            }
+        }
+        var obj1 = new demo("porsche", "xxxx")
+        obj1.setmethode = 2000000;
+        obj1.getmethod
+
+        // Ex:-
+        class ex {
+            constructor(htnm, name, gender) {
+                this.hallticket_number = htnm;
+                this.stud_name = name;
+                this.stud_gender = gender;
+            }
+            get getmethode() {              // It returns only one statement by using return statement But console.log prints all statements.
+                console.log("HallTicket_number of the Student: ", this.hallticket_number);
+                console.log("Name of the Student: ", this.stud_name);
+                console.log("Gender of the Student: ", this.stud_gender);
+
+            }
+        }
+        var obj1_new = new ex(605, "raju", "male")
+        var var11 = obj1_new.getmethode
+
+    </script>
+</body>
+
+</html>

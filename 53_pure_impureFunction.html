@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Pure and Impure Function:- </h1>
+    <p>1.Pure function = It has no side effects,output is pridictible(Every time same op for same input.)</p>
+    <p>2.Impure function = It has some effects</p>
+    <script>
+        //1. pure function = It does not modify the outer statements and arguments
+        function pure(a, b) {
+            return a * b
+        }
+        var var_1 = pure(3, 3)
+        console.log(var_1)
+        var var_1 = pure(3, 3)   // It retuns same output for same input i.e pure function
+        console.log(var_1)
+        var var_1 = pure(3, 3)
+        console.log(var_1)
+
+        //2.Impure function = opposite to pure function.
+        arr_1 = [10, 20, 30, 40, 50]
+        function impure(arr, num) {
+            arr.push(num)
+            return arr_1
+        }
+        console.log(arr_1)
+        var x = impure(arr_1, 4)
+        console.log(x)
+        console.log(arr_1)
+        var x = impure(arr_1, 4)  // same input but output changed everytime.
+        console.log(x)
+
+        // impure to pure function
+        arr_2 = [100, 200, 300, 400]
+        function impure1(arr, num) {
+            var new_arr = [...arr, num]
+            return new_arr
+        }
+        console.log(arr_2)
+        console.log(impure1(arr_2, 9))
+
+        console.log(arr_2)
+        console.log(impure1(arr_2, 9))
+
+        console.log(arr_2)
+        console.log(impure1(arr_2, 9))
+
+    </script>
+</body>
+
+</html>

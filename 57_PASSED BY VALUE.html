@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Passed by value and passed by reference =</h1>
+    <p>1. Passed by value :- passing the value as a argument.</p>
+    <script>
+
+        // 1. Passed by value.
+        var var_1 = 10;
+        function ex(num) {
+            num = 11
+            console.log(num)
+        }
+        console.log("Before call :", var_1)
+        ex(var_1)
+        console.log("After call :", var_1)                  // Value not modified.
+
+
+
+        // 2. Passed by reference.(array,object)
+        var arr = [1, 2, 3, 4, 5, 6]
+        function ex1(num1) {
+            arr[0] = 10;
+            console.log("Inside the function : ", arr[0])
+        }
+        console.log("Before calling the function : ", arr[0])
+        ex1(arr)
+        console.log("After calling the function :", arr)        // Value modified.
+
+    </script>
+</body>
+
+</html>

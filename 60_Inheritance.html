@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Inheritance used to inherite the properties of parent class to child class</h1>
+    <script>
+        class p1 {
+            constructor(name, price) {
+                this.car_name = name;
+                this.car_price = price;
+            }
+            get getmethode() {
+                console.log("Get methode of parent class : ", this.car_name)
+            }
+        }
+        class ch1 extends p1 {
+            constructor(name, price, ranking) {
+                super(name, price)
+                this.car_ranking = ranking;
+            }
+            methode1() {
+                console.log("Name of the car : ", this.car_name)
+                console.log("price of the car : ", this.car_price)
+                console.log("ranking of the car : ", this.car_ranking)
+            }
+        }
+        var parent_obj = new p1("bmw", 1900000)
+        var child_obj = new ch1("porsche", 1700000, 3)
+        child_obj.methode1()
+        parent_obj.getmethode
+
+    </script>
+</body>
+
+</html>

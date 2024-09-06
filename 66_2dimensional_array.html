@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Two dimensional array = it conatains 1 dimensional arrays.</h1>
+    <script>
+        //1. 1-dimensional array:
+        var arr_1 = [1, 3, 5, 7, 9]
+        console.log("One dimensional array : ", arr_1)
+
+        //2. 2-dimensional array:
+        var arr_2 = [["raju", 22, "male"],
+        ["john", 23, "male"],
+        ["emma", 20, "female"]]
+
+        console.log("complete 0th  array : ", arr_2[0])     // It returns complete first array.
+        console.log("complete 1th array : ", arr_2[1])     // It returns complete second array.
+        console.log("complete 2nd array : ", arr_2[2])     // It returns complete third array.
+        console.log("0th element of 0th array : ", arr_2[0][0])  // It retuns first element of first array.
+        console.log("1th element of 1th array : ", arr_2[1][1])   // It retuns second element of second array.
+        console.log("0th element of 2nd array : ", arr_2[2][0])   // It retuns first element of third array.
+    </script>
+</body>
+
+</html>

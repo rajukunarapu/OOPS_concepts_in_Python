@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Array objects filter = Filtering array objects using filter methode</h1>
+
+    <script>
+        // objects in arrays , Here we can use forEach and forOf But directly on objects these two methodes not possible.
+        var obj1 = [{ "name": "raju", "age": 22, "gender": "male" },
+        { "name": "john", "age": 22, "gender": "male" },
+        { "name": "bob", "age": 20, "gender": "male" },
+        { "name": "mike", "age": 21, "gender": "male" },
+        { "name": "alice", "age": 24, "gender": "female" },
+        { "name": "carry", "age": 25, "gender": "female" },
+        { "name": "emma", "age": 20, "gender": "female" },
+        { "name": "roy", "age": 22, "gender": "male" },
+        { "name": "speed", "age": 21, "gender": "male" },
+        { "name": "taylor", "age": 26, "gender": "male" },
+        { "name": "stokes", "age": 24, "gender": "male" },
+        { "name": "gal", "age": 22, "gender": "female" },
+        { "name": "smrithi", "age": 20, "gender": "female" },
+        { "name": "deol", "age": 29, "gender": "female" },
+        { "name": "puja", "age": 22, "gender": "female" }]
+
+        // Filter methode used to returns the result in new array, that is the advantage of filter(it takes call back function in any form)
+        var var2 = obj1.filter((item, index, t_obj) => {
+            // return item     // it returns total objects bcz it is in the form of array. In array it can return only values 
+            // return index     // it returns total objects bcz it is in the form of array. In array it can return only indexes 
+            // return t_obj     // it returns total objects bcz it is in the form of array. In array it can return total array
+            return (item.gender == "male")     // item returns total objects and gender== "male" returns the objects with gender male
+        })
+        console.log(var2)
+
+        // For-of() not returns the result in new array , that's why we created empty new array
+        new_arr = []
+        for (i of obj1) {                  // Here total objects come to "i" varible as array variables.
+            if (i.gender == "female") {
+                (new_arr.push(i))          // pushing that only condition true values to newly crated empty array.
+            }
+        }
+        console.log(new_arr)
+
+        new_arr_1 = []
+        for (i in obj1) {
+            // console.log(i)      // Here it only returns indexes.
+            new_arr_1.push(i)
+        }
+        console.log(new_arr_1)     // New array returns all indexes that are pushed.
+
+
+
+        //1. Array for-in, for-of, for-each
+        var arr = [1, 2, 3, 4, 5, 6]
+        for (i in arr) {                       // For-in pointing index in array.
+            console.log("index number : ", i)
+        }
+        for (i of arr) {
+            console.log("value : ", i)         // For-of pointing value in array.
+        }
+        arr.forEach((val, ind, tr) => {        // ForEach poiting item,index,total_Array.
+            console.log("index number :", ind)
+            console.log("index number :", ind + " and value :", val)
+            console.log("total array :", tr)
+        })
+
+        // 2. Objects  only for-in , for-of and for-Each directly not applicable on plain objects like below given But it can applicable on array objects
+        var obj = { "name": "raju", "age": 22, "gender": "male" }
+        for (i in obj) {                        // For-in pointing keys in objects
+            console.log("key name : ", i)
+            // If you want value name use [key_name]
+            console.log("Value : ", obj[i])
+            // In single line
+            console.log("key name :", i + " and value : ", obj[i])
+        }
+
+
+    </script>
+
+</body>
+
+</html>

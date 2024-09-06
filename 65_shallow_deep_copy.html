@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>1. Shallow copy = It copies from the original and if it is manipulate original also modified.</h1>
+    <h1>2. Deep copy = If copy variable modified there is no effect in original.</h1>
+
+    <script>
+        // 1. Shallow copy;
+        var arr1 = [1, 2, 3, 4, 5]
+        console.log("Oginal copy : ", arr1)
+
+        var var_1 = arr1
+        var_1[1] = 100
+        console.log("Copied : ", var_1)    // modified
+        console.log("orignal but after modified : ", arr1)  // Oiginal also manipualted.
+
+        //2 . Deep copy;
+        var arr2 = [100, 200, 300, 400]
+        console.log("original Array: ", arr2)        // Original
+
+        var var_2 = Object.assign([], arr2)
+        //same as above
+        // var var_2 = [...arr2]
+        var_2[2] = 10000                        // modified
+        console.log("After modifying 2nd index : ", var_2)
+
+        console.log(arr2)                         // Original array is not manipualted.
+
+    </script>
+
+</body>
+
+</html>

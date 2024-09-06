@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- Every Website has local storage and session storage in application tab of developer tools. -->
+    <h1>Local storage = storing data permenently in terms of key-value pairs. If you manipualte in one window it also
+        reflect on other windows. </h1>
+    <h1>Session storage = Storing data temporarly in terms of key-value pair. If you manipulate in one window it doesn't
+        affect the another window.</h1>
+    <p>Ex:- You created one data in session storage, Deleted in that particular window and It will there on another
+        window. It's a window independent. </p>
+    <script>
+
+        // local storage
+        localStorage.setItem("name", "raju")   // set the data in local storage.
+        var var_1 = localStorage.getItem("name")  // get the item in console block.
+        console.log(var_1)
+
+        //session storage
+        sessionStorage.setItem("name", "raju2")
+        console.log(sessionStorage.getItem("name"))
+
+    </script>
+</body>
+
+</html>

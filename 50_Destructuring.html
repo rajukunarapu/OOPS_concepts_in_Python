@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>destructuring concept used in arrays and objects, Used to unpack the variables .</h1>
+    <p>It means the assigning items to variables</p>
+    <script>
+        //Normally arrays , objects items assigned to variables.
+        // 1. Arrays =
+        var arr_1 = [10, 20, 30, 40, 50, 60]
+        let a = arr_1[0]
+        let b = arr_1[1]
+        let c = arr_1[2]
+        let d = arr_1[3]
+        let e = arr_1[4]
+        let f = arr_1[5]
+        console.log(a, b, c, d, e, f)
+
+        // Use of Destructuring.
+        let [a1, a2, a3, a4, a5, a6] = arr_1
+        console.log(a1, a2, a3, a4, a5, a6)
+
+
+        //2. Objects = 
+        var obj_1 = {
+            name: "raju",
+            age: 22,
+            address: {
+                state: "XXX",
+                city: "YYY"
+            }
+        }
+        // normally, objects keys are accessed in this way.
+        let x1 = obj_1.name
+        let x2 = obj_1.age
+        let x3 = obj_1.address.state
+        console.log(x1, x2, x3)
+
+        let y1 = obj_1["name"]
+        let y2 = obj_1["age"]
+        let y3 = obj_1["address"]
+        console.log(y1, y2, y3)
+
+        // using Destructuring.
+        let { name, age, address: { state }, address: { city } } = obj_1       // Inside the address we have another 2 keys, In this way we are accessed the inside keys.
+        console.log(name, age, state, city)
+        // aliace naming also possible
+        let { name: na } = obj_1
+        console.log(na)
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Regular Expressions are used to create the search patterns</h1>
+    <p>2 methodes are used to search that patterns:-</p>
+    <p>1.test("pass the string")</p>
+    <p>2. exec = used to return the result in an array format</p>
+
+    <script>
+        // methode-1 for creating RE  use (//)
+        var var_1 = /raju/
+        var var_2 = var_1.test("my name is raju")      // test the string wether that is present in pattern or not. If it is it returns true
+        console.log(var_2)  // It returns true
+
+        // Methode-2 use constructor function.
+        var v = new RegExp("john")
+        v1 = v.test("john is a name")
+        console.log(v1)
+
+        var x = /[0-9]{10}$/     // [0-9] = pattern has 0 to 9 numbers , min and max numbers should be 10. finally it's end with number
+        x1 = x.test("2343455545535355355a")  // Here it returns false.bcz it's ends with letter.
+        console.log(x1)
+
+        var y = /[0-9][a-z]$/   // It means ends with number and letter.
+        y1 = y.test("33443434343434r")   // Ends with 4r.
+        console.log(y1)
+
+        //meta characters
+        //1.star(*) = any number of times includes 0th time.
+        var z = /ra*/     // it accepts a in any number of times(It includes '0times ')
+        va = z.test("r")
+        console.log(va)
+        va1 = z.exec("ujar")
+        console.log(va1)   //It returns in array format.find the index number of starting character of pattern in given string.
+
+        //2.plus(+) = one or morethan one
+        var z1 = /ra+/
+        ex = z1.test("r")   // returns false bcz of a is not there.
+        console.log(ex)
+
+        //3.? 
+        var z2 = /ra?/
+        z3 = z2.test("r")   // returns true a occurences 0 or more times
+        console.log(z3)
+
+        //4.{n}  = match the number of items.
+        var z33 = /ra{3}/
+        z44 = z33.test("raaa")     // If "a" occurences three or more than three it returns true
+        console.log(z44)
+
+        // 5. {n,}  = morethan that times
+        var z55 = /sa{4,}/
+        z66 = z55.test("saaaa")
+        console.log(z66)
+
+        // dot(.) = it takes any one character
+        var y11 = /sa.k/
+        y13 = y11.test("saik")        // one character
+        // y13 = y11.test("sa8k")    // one number
+        console.log(y13)
+
+        var a11 = /\d/         // It takes any number of digits but not the characters.
+        b11 = a11.test("78528709545")
+        console.log(b11)
+
+        var c11 = /\D/        // It takes other than character "d" (alphabets,_,)
+        e11 = c11.test("333")
+        console.log(e11)
+
+        var g11 = /\w/         // It takes all ([0-9][a-z][A-Z]_)
+        g12 = g11.test("iueshuifhwiuf76489279872985_")
+        console.log(g12)
+
+        var k1 = /\W/        // It takes other "w"  special symbols
+        k22 = k1.test("+-*/&5$")
+        console.log(k22)
+    </script>
+
+</body>
+
+</html>

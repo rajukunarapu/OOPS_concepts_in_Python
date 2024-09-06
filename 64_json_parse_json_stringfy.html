@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>1.Json.stringfy(var_name) = This used in client and server to exchanging data in the form string between them.
+    </h1>
+    <h1>2, Json.parse() = used to </h1>
+    <script>
+
+        // 1, array :-
+        var arr_1 = ["raju", 22, "male"]
+        console.log("Normal Array : ", arr_1)                     // It returns normal array, We can access.
+        var var_1 = JSON.stringify(arr_1)
+        console.log("Using Json.stringfy : ", var_1)              // It returns as string we can't access.
+        console.log("Using Json.parse : ", JSON.parse(var_1))     // It returns as original.
+
+        //2, Object :-
+        var obj1 = { "name": "raju", "age": 22, "gender": "male" }
+        console.log("nomal object : ", obj1)                      // It returns normal object, We can access.
+
+        var var_2 = JSON.stringify(obj1)
+        console.log("Using Json.stringfy : ", var_2)              // It returns as string we can't access.
+        console.log("Using Json.parse : ", JSON.parse(var_2))     // It returns as original.
+
+    </script>
+</body>
+
+</html>

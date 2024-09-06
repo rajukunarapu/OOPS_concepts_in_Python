@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Lexical Scope = scope of that variable</h1>
+    <script>
+        var global = 10;
+        function outer() {
+            console.log(`X value is : ${x}`)
+            console.log(global)  // Firstly, It checks locally and then goes for gloabally.
+            function inner() {
+                console.log(global)  // First, It checks functional scope then  goes for global scope.
+            }
+            inner()
+        }
+        // var x = 20;      // If x variable created inside the calling function it takes that value.
+        outer()
+        var x = 30;      // If x variable created with var key word and outside of calling function , There is no display in the console.
+
+    </script>
+</body>
+
+</html>

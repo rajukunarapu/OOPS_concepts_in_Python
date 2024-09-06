@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Recursion = call function same function in that function.</h1>
+    <script>
+        // we should give terminate condition to recursion otherwise it will executes infine time
+        var var_1 = 10;
+        function rec(n) {
+            if (n > 0) {
+                console.log(n)
+                rec(n - 1)        // calling same function in that function.
+            }
+        }
+        rec(var_1)
+
+
+        // Same as above.
+        for (i = 10; i > 0; i--) {
+            console.log(i)
+        }
+    </script>
+</body>
+
+</html>
