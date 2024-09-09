@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Shuffle the array using sort(),Sort() takes call back function and function takes only 2 parameter.if return
+        statement is positive number it swaps the items. </h1>
+    <script>
+        var arr = [3, 4, 6, 2, 1, 9, 6, 7]
+        var var_1 = arr.sort(() => {
+            return Math.random() - 0.5         // random function generates random number less than 1 every time. subtracting the random number from the 0.5, whenever we are reload the tab it shuffle the array every time. 
+        })
+        console.log(var_1)
+
+        // Ascending order of array
+        var var_2 = arr.sort((a, b) => { if (a < b) { return -1 } else { return 1 } })
+        console.log(var_2)
+
+        // descending order of array
+        var var_2 = arr.sort((a, b) => { if (a < b) { return 1 } else { return -1 } })
+        console.log(var_2)
+
+
+
+
+    </script>
+</body>
+
+</html>

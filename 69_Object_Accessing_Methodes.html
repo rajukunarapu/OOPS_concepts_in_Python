@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Object .methode vs []notation</h1>
+
+    <script>
+        //1. Normal
+        var obj = { "name": "raju" }
+        console.log("Using normal square bracket notation :", obj["name"])
+        console.log("Using normal .methode :", obj.name)
+
+        for (i in obj) {
+            console.log("Using squre bckt ntn  in for-in loop :", obj[i])
+            console.log("using .methode in for-in loop :", obj.i)  // It returns undefined, It checks wether the "i" key in object or not . If key is available then  returns value.  
+        }
+    </script>
+
+</body>
+
+</html>
