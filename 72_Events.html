@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <!-- 1.Fisr way of adding event handling -->
+    <button>click</button>
+    <button id="btn">stop</button>
+    <script>
+        // function test() {
+        //     alert("You have cliked here")
+        //     document.body.style.background = "red"
+        // }
+
+        // 2. second way of adding  event handling
+        let p = document.querySelector("button")
+        p.onclick = test1
+        function test1(ele) {
+            console.log(ele.target)    // ele.target specify the target element , You can give anyname to ele.
+            document.body.style.backgroundColor = "blue"
+        }
+        //remove
+        var q = document.querySelector("#btn")
+        q.addEventListener("click", stop1)
+        function stop1() {
+            p.onclick = null
+        }
+
+
+        //3 . third way adding event handling
+        p.addEventListener("click", test3)
+        function test3() {
+            alert("cliked")
+            // document.body.style.backgroundColor = "yellow"
+        }
+        //removing element
+        var q = document.querySelector("#btn")
+        q.addEventListener("click", stop1)
+        function stop1() {
+            p.removeEventListener("click", test3)
+        }
+
+
+
+    </script>
+</body>
+
+</html>

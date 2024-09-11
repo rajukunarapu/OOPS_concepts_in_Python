@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>DOM traversal = Traverse whole html document by using DOM.</h1>
+    <div class="class1">
+        <h1>First Division</h1>
+        <p>First paragraph</p>
+        <p>second paragraph</p>
+    </div>
+
+    <div class="class2">
+        <p>privious page</p>
+        <h1 id="header">second Division</h1>
+        <p>Next paragraph</p>
+    </div>
+
+    <div class="class3">
+        <p>first page</p>
+        <p>second paragraph</p>
+    </div>
+
+    <script>
+        var p = document.querySelector("#header")
+        console.log(p)                                          // h1 element
+        console.log(p.parentElement)                            // h1 parent element
+        console.log(p.nextElementSibling)                       // h1 next sibling element
+        console.log(p.previousElementSibling)                   // h1 privious sibling element.
+        console.log(p.parentElement.previousElementSibling)     // h1 parent element privious element sibling
+        console.log(p.parentElement.previousElementSibling.childElementCount)    // h1 parent element privious element sibling child count
+        console.log(p.parentElement.previousElementSibling.children)             // h1 parent element privious element sibling childrens
+        console.log(p.parentElement.previousElementSibling.childNodes)           // h1 parent element privious element sibling childnodes
+        console.log(p.parentElement.nextElementSibling)                          // h1 parent element Next element sibling
+        console.log(p.parentElement.nextElementSibling.childElementCount)        // h1 parent element Next element sibling child count
+        console.log(p.parentElement.nextElementSibling.children)                 // h1 parent element Next element sibling children
+        console.log(p.parentElement.nextElementSibling.childNodes)               // h1 parent element Next element sibling child nodes
+    </script>
+</body>
+
+</html>

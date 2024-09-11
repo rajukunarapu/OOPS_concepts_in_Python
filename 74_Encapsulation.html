@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Encapsulation used to ristrict the access to the some components of a object to protect it's internal state.
+    </h1>
+    <p>This can be done by three methodes.</p>
+    <p>1.closure = inner function access the outer function variables.</p>
+    <p>2. private variables in a class that is defined by #symbol</p>
+    <p>3. creating private fields by using "Symbol" keyword.</p>
+    <script>
+        //1.closure
+        function person(name, age) {
+            let _name = name;
+            let _age = age;
+            this.getMethode = function () {
+                return `name is : ${_name} and age is : ${_age}`
+            }
+            this.setMethode = function (newAge) {
+                if (newAge > 0) {
+                    _age = newAge
+                }
+                else {
+                    console.log("Enter valid age")
+                }
+            }
+
+        }
+        var obj1 = new person("raju", 20)
+        console.log(obj1.getMethode())
+        obj1.setMethode(22)
+        console.log(obj1.getMethode())
+        console.log(obj1._name)        // It returns undefined , bcz _name and _age is a private variable .this is encapsulation
+
+        //2. #private varaibles in classes.
+        class person1 {
+            // private variables
+            #name
+            #age
+            constructor(name, age) {
+                this.#name = name;
+                this.#age = age;
+            }
+            // get keyword
+            get getmethod() {
+                return `Name is : ${this.#name} and age is : ${this.#age}`
+            }
+            greet() {
+                console.log("this is greet methode")
+            }
+            set setmethod(newAge) {
+                if (newAge > 0) {
+                    this.#age = newAge;
+                }
+                else {
+                    console.log("Enter a valid age")
+                }
+            }
+        }
+        var obj2 = new person1("john", 20)
+        console.log(obj2.getmethod)              // If you use get before the methode defintion no need to put perenthesis when it's calling.
+        obj2.greet()                 // We defined as normal function that's why we use parenthesis for calling.
+        obj2.setmethod = 22                      // if you use set before the methode defintion no need to put perenthesis when it's calling, assign the value by using equal operator.
+        console.log(obj2.getmethod)
+
+    </script>
+</body>
+
+</html>

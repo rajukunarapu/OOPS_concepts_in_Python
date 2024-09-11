@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>navigator.geolocation used to get the location of the user</h1>
+    <p>navigator is a object , You can see on console box </p>
+    <p>navigator.geolocation has 3 methodes get current position is one of the methode of it.</p>
+    <script>
+        // first, Check the navigator.geolocation in the web browser
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(callMethode, error,)   // it takes 3 arguments , 1 for successfulcall back and another one error call back , another one option.
+        }
+        function callMethode(data) {       // successfull call back come to data variable.
+            console.log(`Toatal information :`, data)                           // It gives total information
+            console.log(`Information about coordinates :`, data.coords)         // It only gives information about coordinates
+            console.log(`Information about latitude :`, data.coords.latitude)   // It only gives the information about lattitude
+            console.log(`Information about longitude :`, data.coords.longitude) // It only gives the information about longitude
+        }
+        function error(data1) {             // error call back come to data1 variable 
+            console.log(data1)
+        }
+    </script>
+</body>
+
+</html>
