@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>1.console.log = used to print the statement in console box</h1>
+    <h1>2.document.write = used to print the statements in document.</h1>
+    <h1>3.alert = alert window used to display the alert box</h1>
+    <div id="demo" class="class1" style="background-color: blue;">
+        <p id="demo1">Hello1</p>
+        <p id="demo2">Hello2</p>
+        <p id="demo3">Hello3</p>
+    </div>
+
+
+
+    <script>
+        //I.Array = used to store the collection of elements of different data types , square brackets used to declare the array.
+        // we can declare the array 2 ways
+
+        //1. first way of array declaration:-
+        var arr1 = ["raju", 22, "male"]
+
+        //2. second way of array declaration:-
+        var arr2 = new Array()         // Used to declare the empty array
+
+        //the following methodes are used to add or remove elements from an array.
+
+        arr2.push("john")              // used to add element in end of an array.
+        arr2.unshift("mike")           // used to add element in starting of the array.
+        arr2.splice(3, 0, "emma", 25)  // used to add or remove elements from array where we want.
+        console.log(arr2)
+        arr2.pop()                     // used to remove element from end of an array.
+        arr2.shift()                   //used to remove element from starting of an arry.
+        console.log(arr2)
+
+        //Multidimensional array:
+        //Flat(depth)  // depth = how many levels you want convert from , If you give 2 it can convert only 2-dimensional array.Infinity specifies infinity levels.
+        var arr_22 = ["raju", ["john", ["emma", "emily"], "jack", "james"]]
+        console.log("Without using flat methode :", arr_22)
+        console.log("Using flat methode to convert multi to single level array :", arr_22.flat(Infinity))
+
+        // Array methodes
+        //1.slice()  = used to cut the array , it takes 2 parameters 1.start 2.end
+        arr2.slice(0, 3)
+        console.log("using slice methode : ", arr2.slice(0, 3))
+
+        //2.join() = used to the join array elements into the string , It takes one parameter i.e is seperator.
+        console.log("using join methode : ", arr2.join("-"))   // here i gave hypen symbol 2 elements seperated by hypen symbol.
+
+        //3.sort() = used to order the elements of an array.it takes call back function in that function that takes 2 parameters.
+        var arr3 = ["watson", "shane", "danny", "mike"]
+        console.log(arr3.sort())  // one way to implement sort()
+
+        // Ascending order
+        var var_1 = arr3.sort((a, b) => {
+            if (a < b) { return -1 }
+            else { return 1 }
+        })  // same as above (ascending order)
+        console.log(var_1)
+
+        //descending order
+        var var_2 = arr3.sort((a, b) => {
+            if (a < b) { return 1 }
+            else { return -1 }
+        })
+        console.log(var_2)
+
+        //4.for-in
+        console.log("for-in loop point the index value of array:-")
+        for (ele in arr3) {
+            console.log(ele)
+        }
+
+        //5.for-of
+        console.log("for-of loop point the value of an array:-")
+        for (ele of arr3) {
+            console.log(ele)
+        }
+
+        //6.for-each
+        console.log("for-Each methode used to point to the item,index and complete array , It takes call back function ");
+        arr3.forEach((item, ind, tarr) => {
+            console.log("Value :", item + " Index :", ind + " Complete array :", tarr)
+        })
+
+        //special methodes:-used to perform specific function on arrays.
+        //1.map = if the condition is true it returns the result in new array.returned array length is equal to original array.
+
+        //1.square numbers
+        var arr_1 = [2, 3, 4, 5, 6, 7, 8, 9]
+        var var_11 = arr_1.map(function (item) {
+            return ("Square numbers ", item * item)
+        })
+        console.log(var_11)
+
+        //2.factorial numbers
+        console.log("factorial numbers :")
+        var x1 = arr_1.map((n) => {
+            if (n < 0) return "factorial does not work on negative numbers"
+            if (n === 0 || n === 1) return "factorial number is 1"
+            var result = 1
+            for (i = 2; i <= n; i++) {
+                result *= i   // result = result*i
+            }
+            return result
+        })
+        console.log("Finding factorail numbers using map methode : ")
+        console.log(x1)
+
+        var arrr = [10, 20, 0, 30]
+        function fact(num) {
+            if (num < 0) return "factorial doesn't work on negative numbers";
+            if (num === 0 || num === 1) return "factorial number is 1";
+            var result = 1;
+            for (i = 2; i <= num; i++) {
+                result = result * i
+                console.log(result)
+            }
+        }
+        console.log("Finding factorial numbers Using normal function :  ")
+        fact(...arrr)
+
+        //2.filter = used to return the result in new aray , returned array is shorter than original array.
+        // Even numbers
+        console.log("Even numbers : ")
+        arr_1.filter((n) => {
+            if (n % 2 == 0) {
+                console.log(n)
+            }
+        })
+
+        // Odd numbers
+        console.log("Odd numbers: ")
+        arr_1.filter((n) => {
+            if (n % 2 == 1) {
+                console.log(n)
+            }
+        })
+
+        //leap year
+        var arr_prime = [2000, 2001, 2002, 2003, 2004, 2005, 20006]
+        var var_prime = arr_prime.filter((n) => {
+            if (n % 4 == 0 || n % 400 == 0) {
+                return n
+            }
+        })
+        console.log("Filter used to find the leap year")
+        console.log(var_prime)
+
+
+
+        //3.reduce = used to return only one value, it takes 4 parametrs accumulator is extra bit.
+        console.log("Factorial numbers using reduce methode : ")
+        var fac = arr_1.reduce((acc, n) => {
+            if (n < 0) return "factorial number is not defined for negative numbers"
+            if (n === 0 || n === 1) return "factorial number is 1"
+            var result = 1
+            for (i = 2; i <= n; i++) {
+                result *= i
+            }
+            console.log(result)
+        }, 2)
+        console.log(fac)
+
+        //4.find = used to the return element if it is true
+        var arr_33 = ["raju", "john", "mike", "bob"]
+        var y1 = arr_33.find((n) => {
+            return n.startsWith("m")
+        })
+        console.log("Using find methode : ")
+        console.log(y1)
+
+        //5.some = used to the return the true value , If one of them is true.
+        var z = arr_33.some((n) => {
+            return n.endsWith("n")
+        })
+        console.log("Using some methode : ")
+        console.log(z)
+
+        //6.every() = used to return true value, If all elements in the condition is true.
+        var yy = arr_33.every((n) => {
+            if (n.length >= 3) {
+                return n
+            }
+        })
+        console.log("Using every methode : ")
+        console.log(yy)
+
+        //II. Strings = are used to strore the continous set of characters in between the single or double quatations.
+        var str = "john mike bob alice"
+
+        //split() used to split the elements the result return in new array.
+        console.log(str.split("")) // every character seperated by comma(,)
+
+        // It takes 2 parameters seperator and limit. 
+        console.log(str.split(" ", 2)) //Every element is seperated by comma(,) and limit is 2
+
+        //String handling methodes:-
+        var str2 = "'   raju   '"
+        console.log("Index of b is :", str.indexOf("b"))
+        console.log("Index of b is :", str.lastIndexOf("b"))
+        console.log("Using split methode :", str.split(" "))
+        console.log("Replacing the john with jockey :", str.replace("john", "jockey"))
+        console.log("Character at 3 index is :", str.charAt(3))
+        console.log("The length of string is :", str.length)
+        console.log("Is string starts with john :", str.startsWith("j"))
+        console.log("Is string ends with john :", str.endsWith("e"))
+        console.log("normal string to upperCase :", str.toUpperCase())
+        console.log("normal string to lowerCase :", str.toLowerCase())
+        console.log("concatinate the string :", str.concat(" concatination"))
+        console.log("trim used to remove white spaces :", str2.trim())
+        console.log("trim used to remove white spaces :", str2.trimStart())
+        console.log("trim used to remove white spaces :", str2.trimEnd())
+        console.log("trim used to remove white spaces :", str2.trimLeft())
+        console.log("trim used to remove white spaces :", str2.trimRight())
+
+
+        // Object = is a collection of key-value pairs. It can define many ways.
+
+        //1.First of object creation :-
+        var obj1 = { "name": "raju", "age": 22, "gender": "male" }
+        //object keys can access by 2 methodes.
+        console.log(obj1.name)   // .methode
+        console.log(obj1["name"])  // Square bracket notation
+
+        //2.second of creating object:-
+        var obj2 = new Object(obj1)
+        console.log(obj2)
+
+        // adding elements to obj2
+        obj2["location"] = "HYD"
+        obj2.education = "B.tech"
+        console.log(obj2)
+
+        // Modifying object elements
+        obj2.name = "modified"
+        obj2.age = 23
+        obj2["location"] = "HYD-uppal"
+        console.log("After modification")
+        console.log(obj2)
+
+        //3.Third way of creating object:-
+        // Using constructor function
+        function first(name, age, gender) {
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+            console.log("name is :", this.name + " and age is :", this.age + " and gender is :", this.gender)
+        }
+        var obj3 = new first("raju", 22, "male")
+
+        //4.using Object.create
+        var obj4 = Object.create(null)
+        obj4.name = "john"
+        obj4.age = 30
+        obj4.gender = "male"
+        console.log(obj4)
+
+        //Functions:- used to perform specific taskes when it's calling.
+        //1.Named function
+        function raju(name) {
+            console.log("name :", name)
+        }
+        raju("Using named function")
+
+        // Using function expression = function stored in variable.
+        var fex = function first(name) {
+            console.log("name :", name)
+        }
+        fex("using named function expression")
+
+        //2. Anonymous function
+        var anon = function (name) {
+            console.log("name :", name)
+        }
+        anon("using anonymous function")
+
+        //3.arrow function
+        var arrow = (name) => {
+            console.log("name :", name)
+        }
+        arrow("Using arrow function")
+
+        //4.Immediately invoked function
+        var imd = function first(name) {
+            console.log("name :", name)
+        }("Immediately invoked function")
+
+        //5.Default parameters
+        function sec(name = "default parameter") {
+            console.log("name :", name)
+        }
+        sec("default parameter modified")
+
+        //6.Rest parameters
+        function rest(name, ...res) {
+            console.log("name :", name)
+            console.log("remaining res parameters :", ...res)
+        }
+        rest("using res", "next1", "next2", "next3", "next4")
+
+
+        //set = set dosn't allow duplicate values
+        var set1 = new Set()
+        console.log(set1)      // create empty set
+        set1.add("john")
+            .add("mike")
+            .add("bob")
+            .add("alice")
+            .add("alice")
+
+        console.log(set1)
+        set1.delete("alice")
+        set1.delete("bob")
+        console.log(set1)
+
+        console.log(set1.keys())
+        console.log(set1.values())
+        console.log(set1.entries())
+
+        //Dom = Document object model used to create , modify ,access and removes the elements of an html document at any position.
+
+        // // var p1 = document.getElementById("demo").innerText = "By using getElement by id"
+        // // var p2 = document.getElementsByClassName("demo1").innerText = "By using get Element by class name"
+        // // var p3 = document.getElementsByTagName("").innerText = "by using tag name"
+        // // var p4 = document.getElementsByTagNameNS("p").innerText = "BY using tag names"
+        // var p5 = document.querySelector(".demo1").innerHTML = "By using qurery selector"
+        // var p6 = document.querySelectorAll("#demo2").innerHTML = "BY using query selector all"
+
+        //1.Getting Element by id
+        var p1 = document.getElementById("demo")
+
+        //2.creating new element
+        var c1 = document.createElement("h1")
+
+        //3.Adding text to newly created element
+        c1.innerText = "Heading -1"
+
+        //4.Appending newly created element to html document
+        p1.appendChild(c1)
+
+        //5.Adding newly created element before the hello3
+        var p2 = document.querySelector("#demo3")
+        p1.insertBefore(c1, p2)
+
+        //6.remove the element
+        var p3 = document.getElementById("demo3")
+        p3.remove()      // removes the Hello3 from html document
+
+        //7.replce
+        var c2 = document.createElement("h6")
+        c2.innerText = "Heading-6"
+        // var p4 = document.getElementById("demo")
+        // p4.replaceWith(c2)
+
+        var par = document.getElementById("demo")
+        par.style.backgroundColor = "red"
+        par.style.width = "200px"
+        par.style.maxHeight = "200px"  // This is the difference b/w maxHeight and normal height.
+        par.style.height = "200px"
+
+        par.setAttribute("style", "background : yellow")
+        console.log(par.classList)
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
